@@ -5,3 +5,16 @@ For data collection we did:
 RESULTS IN : {
 https://rest.uniprot.org/uniprotkb/search?compressed=true&format=fasta&query=%28%28taxonomy_id%3A2759%29+AND+%28length%3A%5B40+TO+*%5D%29+AND+%28reviewed%3Atrue%29+AND+%28fragment%3Afalse%29+AND+%28existence%3A1%29%29&size=500
 }
+
+def filter_entry_pos(entry):
+    # We iterate over the features of the entry
+    for feature in entry["features"]:
+        # We only consider features of type Signal
+        if feature["type"] == "Signal":
+            # Check if the coiled-coil starts before position 100
+            if feature["location"]["end"]["value"] >= 14:
+              if feature["evidences"]["evidenceCode"] == "ECO:0000269" in feature["evidences"]:
+                  return True
+    return False
+
+We were trying to filter positives which this function, which has some python syntax problems in the 3rd nested if. So, we realized it is best to use 2 separate APIs for the neg and pos datasets. The positive has to be filtered by Signal Peptide | * | Experimental.
