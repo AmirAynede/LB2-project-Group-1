@@ -17,4 +17,22 @@ def filter_entry_pos(entry):
                   return True
     return False
 
-We were trying to filter positives which this function, which has some python syntax problems in the 3rd nested if. So, we realized it is best to use 2 separate APIs for the neg and pos datasets. The positive has to be filtered by Signal Peptide | * | Experimental.
+We were trying to filter positives with this function, which has some python syntax problems in the 3rd nested if. So, we realized it is best to use 2 separate APIs for the neg and pos datasets. The positive has to be filtered by Signal Peptide | * | Experimental.
+
+The command doesn’t do what we wanted it to do because of operator precedence in Python. Python reads it as:
+
+if feature["evidences"]["evidenceCode"] == ("ECO:0000269" in feature["evidences"]):
+
+
+################################################################################################
+
+
+BG - I edited the notebook:
+	• The last function was splitted in 2 functions, one for pos and one for negs 
+ 	• The I commented out the filter_neg_entry function because idk if we actually need it
+	• I commented the fact that instead of one output_file variable we need 2, one for pos and one for neg
+	• I started the editing of the last cell of the notebook calling the 2 functions
+   - The next steps should be:
+	• verification of numerosity of the datasets all together (Amir and I checked quickly)
+	• Collection of the datasets as TSV files running the script
+	• Figuring out how to extract the FASTA format (maybe through the TSV) 
