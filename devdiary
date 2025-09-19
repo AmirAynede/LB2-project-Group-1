@@ -36,3 +36,16 @@ BG - I edited the notebook:
 	• verification of numerosity of the datasets all together (Amir and I checked quickly)
 	• Collection of the datasets as TSV files running the script
 	• Figuring out how to extract the FASTA format (maybe through the TSV) 
+
+Amir:
+Today we editted the script and finalize it by adding the "break" right after the for loop so it will prevent any unwanted iteration.
+Then, we downloaded the pos and neg TSV file. The final number of the True is 1384. Find the part we eddited in the following:
+
+ hel_trs = False
+    for f in entry["features"]:
+        # We only consider the first coiled-coil segment
+        if f["type"] == "Transmembrane" and f["description"]=="Helical" and f["location"]["start"]["value"] <= 90:
+          hel_trs = True
+          break
+
+Moreover, we added the script to extract the fasta seq that we need:
