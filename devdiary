@@ -1,4 +1,5 @@
 For data collection we did:
+
 > obtain the API URL: {
 "oc": "2759", "sequence length" : "40", "Reviewed": "yes", "fragments": "no", "PE": "evidence at protein level"
 } 
@@ -49,3 +50,14 @@ Then, we downloaded the pos and neg TSV file. The final number of the True is 13
           break
 
 Moreover, we added the script to extract the fasta seq that we need:
+> obtain the API URL: 
+	{
+	"oc": "2759", "sequence length" : "40", "Reviewed": "yes", "fragments": "no", "PE": "evidence at protein level"
+	} 
+	RESULTS IN : {
+	https://rest.uniprot.org/uniprotkb/search?compressed=true&format=fasta&query=%28%28taxonomy_id%3A2759%29+AND+%28length%3A%5B40+TO+*%5D%29+AND+%28reviewed%3Atrue%29+AND+%28fragment%3Afalse%29+AND+%28existence%3A1%29%29&size=500
+	}
+
+> write the script for pos DS -> PRI and BI
+	
+>write the script for neg DS -> A and K
