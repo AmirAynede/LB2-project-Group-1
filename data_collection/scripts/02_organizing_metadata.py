@@ -1,5 +1,6 @@
 import pandas as pd
 from sys import argv
+import time as t
 
 neg_file = argv[1]
 pos_file = argv[2]
@@ -13,7 +14,11 @@ def filter_tsv(filename, id_list, newfile):
         with open(filename, "r") as data:
             with open(newfile, "a") as DAfile: 
                 for line in ids:
+                    print(line)
+                    t.sleep(5)
                     for l in data:
+                        print(l)
+                        t.sleep(5)
                         if l.startswith(line.rstrip()):
                             DAfile.write(l)
                             break
