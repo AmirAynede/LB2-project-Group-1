@@ -12,5 +12,5 @@ unf_pos = pd.read_csv(pos_path, sep = "\t",  names = col_labels)
 
 print(unf_neg.head(5))
 print("")
-print(unf_neg.head(5))
+print(unf_pos.head(5))
 
