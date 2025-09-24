@@ -45,7 +45,7 @@
   | Dataset | No. entries |
   | ------------- | ------------- |
   | Positive  | 20,615  |
-  | CNegative  | 2,932  |
+  | Negative  | 2,932  |
   
 ## 2. Data Preparation
 **Objective:** preprocess datasets for cross-validation and benchmarking.
