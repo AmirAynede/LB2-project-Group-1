@@ -38,6 +38,8 @@
 ### b. Filter of the positive dataset
   In order to filter out the sequences with SP shorter than 14 residues, a python script was implemented.
   The final number of results in the positive dataset was: **2,932**
+
+**STH ABOUT THE API, BATCH, TSV AND FASTA GENERATION**
   
 ### c. Summary
   The final amount of entries in the datasets can be found in the following table:
