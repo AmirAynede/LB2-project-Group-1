@@ -9,22 +9,22 @@ pos_id = argv[4]
 
 THE_tsv = argv[5]
 
-def filter_tsv(filename, id_list, newfile):
+def filter_tsv(id_list, filename, newfile):
     with open(id_list, "r") as ids:
         with open(filename, "r") as data:
             with open(newfile, "a") as DAfile: 
                 for line in ids:
                     print(line)
-                    t.sleep(5)
+                    t.sleep(1)
                     for l in data:
                         print(l)
-                        t.sleep(5)
+                        t.sleep(1)
                         if l.startswith(line.rstrip()):
                             DAfile.write(l)
                             break
 
-filter_tsv(pos_file,pos_id,THE_tsv)
-filter_tsv(neg_file,neg_id,THE_tsv)
+filter_tsv(pos_id, pos_file, THE_tsv)
+filter_tsv(neg_id, neg_file, THE_tsv)
 
 '''
 col_labels = ["UniProt ID", "Species", "Kingdom", "Seq Length", "Cleavage Site", "TransM Helix 90", "T/B", "T_id"]
