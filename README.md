@@ -5,10 +5,10 @@
 > Signal peptides are typically short peptides located in the N-terminal of proteins. They carry information for protein secretion and are cleaved upon localization.
 > *In-silico* prediction of signal peptides is crucial for functional annotation and localization.
 
-## Data Collection
+## 1. Data Collection
 **Objective:** retrieve relevant datasets from UniProtKB.
 
-### Selection criteria
+### a. Selection criteria
 
 **For the positive dataset:**
   1. No fragments: Fragment: No (fragment:false)
@@ -20,7 +20,7 @@
 
   Final query: `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) AND (ft_signal_exp:*)`
 
-  Number of results (September 22nd): **2,949**
+  Number of results (22/09/2025): **2,949**
 
 **For the negative dataset:**
   1. No fragments: Fragment: No (fragment:false)
@@ -33,9 +33,19 @@
 
   Final query: `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) NOT (ft_signal:*) AND ((cc_scl_term_exp:SL-0091) OR (cc_scl_term_exp:SL-0191) OR (cc_scl_term_exp:SL-0173) OR (cc_scl_term_exp:SL-0204) OR (cc_scl_term_exp:SL-0209) OR (cc_scl_term_exp:SL-0039))`
 
-  Number of results (September 22nd): **20,615**
+  Number of results (22/09/2025): **20,615**
 
-###
+### b. Filter of the positive dataset
+  In order to filter out the sequences with SP shorter than 14 residues, a python script was implemented.
+  The final number of results in the positive dataset was: **2,932**
   
-## Data Preparation
+### c. Summary
+  The final amount of entries in the datasets can be found in the following table:
+  
+  | Dataset | No. entries |
+  | ------------- | ------------- |
+  | Positive  | 20,615  |
+  | CNegative  | 2,932  |
+  
+## 2. Data Preparation
 **Objective:** preprocess datasets for cross-validation and benchmarking.
