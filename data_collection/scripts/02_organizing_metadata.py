@@ -2,46 +2,26 @@ import pandas as pd
 from sys import argv
 import time as t
 
-neg_file = argv[1]
-pos_file = argv[2]
-neg_id = argv[3]
-pos_id = argv[4]
+neg_path = argv[1]
+pos_path = argv[2]
+neg_id_path = argv[3]
+pos_id_path = argv[4]
 
-THE_tsv = argv[5]
-
-def filter_tsv(id_list, filename, newfile):
-    with open(id_list, "r") as ids:
-        with open(filename, "r") as data:
-            with open(newfile, "a") as DAfile: 
-                for line in ids:
-                    print(line)
-                    t.sleep(1)
-                    for l in data:
-                        print(l)
-                        t.sleep(1)
-                        if l.startswith(line.rstrip()):
-                            DAfile.write(l)
-                            break
-
-filter_tsv(pos_id, pos_file, THE_tsv)
-filter_tsv(neg_id, neg_file, THE_tsv)
-
-'''
 col_labels = ["UniProt ID", "Species", "Kingdom", "Seq Length", "Cleavage Site", "TransM Helix 90", "T/B", "T_id"]
 unf_neg = pd.read_csv(neg_path, sep = "\t", names = col_labels)
 unf_pos = pd.read_csv(pos_path, sep = "\t",  names = col_labels)
+neg_id_df = pd.read_csv(neg_id_path,sep = "\n", names = ["UniProt ID"])
+pos_id_df = pd.read_csv(pos_id_path,sep = "\n", names = ["UniProt ID"])
+
 
 #def filter_df(dataframe, id_file):
 
 print(unf_neg.head(5))
 print("")
 print(unf_pos.head(5))
-
-"""
-
-
-unf(r) and fil (w):
-for line in unf:
-    if line.startswith(line id):
-        filter.writeline
-'''
+print("")
+print(unf_neg[unf_neg["UniProt ID"].str.upper().str.strip().isin(
+neg_id_df["UniProt ID"].str.upper().str.strip())])
+print("")
+print(unf_pos[unf_pos["UniProt ID"].str.upper().str.strip().isin(
+pos_id_df["UniProt ID"].str.upper().str.strip())])
