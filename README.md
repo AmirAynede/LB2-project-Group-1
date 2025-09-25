@@ -2,8 +2,7 @@
 ## Laboratory of Bioinformatics 2 2025/2026 -  Alma Mater Studiorum Università di Bologna
 
 ### Abstract
-> Signal peptides are typically short peptides located in the N-terminal of proteins. They carry information for protein secretion and are cleaved upon localization.
-> *In-silico* prediction of signal peptides is crucial for functional annotation and localization.
+Signal peptides are typically short peptides located in the N-terminal of proteins that carry information for protein secretion and are cleaved upon localization. *In-silico* prediction of signal peptides is crucial for functional annotation and localization. 
 
 ## 1. Data Collection
 **Objective:** retrieve relevant datasets from UniProtKB.
@@ -51,3 +50,9 @@
   
 ## 2. Data Preparation
 **Objective:** preprocess datasets for cross-validation and benchmarking.
+
+
+
+## 3. Data analysis
+
+## References 
