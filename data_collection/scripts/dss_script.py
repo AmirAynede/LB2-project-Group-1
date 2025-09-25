@@ -23,8 +23,8 @@ filter_tsv(id_file, tsv_file, tsv_filtered)
 '''
 neg = argv[1]
 pos = argv[2]
-neg_labels = ["UniProt_ID", "Species", "Kingdom", "Seq_Length", "TransM_Helix_90"]
-pos_labels = ["UniProt_ID", "Species", "Kingdom", "Seq_Length", "Cleavage"]
+neg_labels = ["UniProt_ID", "Species", "Kingdom", "Seq_Length", "TransM_Helix_90", "T(1-5)/B(0)"]
+pos_labels = ["UniProt_ID", "Species", "Kingdom", "Seq_Length", "Cleavage", "T(1-5)/B(0)"]
 unf_neg = pd.read_csv(neg, sep = "\t", names = neg_labels)
 unf_pos = pd.read_csv(pos, sep = "\t",  names = pos_labels)
 
