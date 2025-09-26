@@ -32,7 +32,7 @@ Signal peptides are typically short peptides located in the N-terminal of protei
 
   Final query: `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) NOT (ft_signal:*) AND ((cc_scl_term_exp:SL-0091) OR (cc_scl_term_exp:SL-0191) OR (cc_scl_term_exp:SL-0173) OR (cc_scl_term_exp:SL-0204) OR (cc_scl_term_exp:SL-0209) OR (cc_scl_term_exp:SL-0039))`
 
-  Number of results (22/09/2025): **20,615**
+ > Number of results (22/09/2025): **20,615**
 
 ### b. Filter of the positive dataset
   In order to filter out the sequences with SP shorter than 14 residues, a python script was implemented.
@@ -53,6 +53,6 @@ Signal peptides are typically short peptides located in the N-terminal of protei
 
 
 
-## 3. Data analysis
+## 4. Data visualization
 
 ## References 
