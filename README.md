@@ -50,7 +50,7 @@ Signal peptides are typically short peptides located in the N-terminal of protei
   
 ## 2. Data Preparation
 **Objective:** preprocess datasets for cross-validation and benchmarking.
-	The data was filtered into Positive and Negative datasets. Then each datasets were randomized to make sure the distrubution of the sequences would not bias the model. After that, for each dataset 80% of the data was used to create 5 training sets. The remaining data was labeled for benchmarking.
+	The data was filtered into Positive and Negative datasets. Then each dataset was randomized to make sure the distrubution of the sequences would not bias the model. After that, for each dataset 80% of the data was used to create 5 training sets. The remaining data was labeled for benchmarking.
 	Finally, each training set from one dataset was merged by its counterpart from the other dataset. 
 
 
