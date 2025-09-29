@@ -36,7 +36,7 @@ Signal peptides are typically short peptides located in the N-terminal of protei
 
 ### b. Filter of the positive dataset
   In order to filter out the sequences with SP shorter than 14 residues, it was necessary to implement a python script. Infact, such a feature is not retrievable simply using the advanced search tool available in UniProtKB.
-  In the python script generator functions were defined in order to query entries and filter the ones of interest. These were finally saved in a <.tsv> file.
+  In the python script generator functions were defined in order to query entries and filter the ones of interest. These were finally saved in a `.tsv` file.
  > The final number of results in the positive dataset was: **2,932**
 
 **STH ABOUT THE API, BATCH, TSV AND FASTA GENERATION**
@@ -54,7 +54,7 @@ Signal peptides are typically short peptides located in the N-terminal of protei
 	The Positive and Negative datasets were clustered in order to avoid redundancy, which would have resulted in biases through the classification methods implementation. 
 	After the clusterization was completed, the list of representative IDs was randomized (for both positive and negative datasets), to make sure the distrubution of the sequences would not bias the model. 
 	Moreover, 80% of the data was used to create 5 training sets while the remaining 20% was labeled for benchmarking for both positive and negative datasets.
-	Finally, each dataset was merged by its counterpart in a tailored <.tsv> file in which features, dataset label and fold label are described. 
+	Finally, each dataset was merged by its counterpart in a tailored `.tsv` file in which features, dataset label and fold label are described. 
 
 
 ## 3. Data visualization
