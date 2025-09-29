@@ -1,8 +1,8 @@
-# Prediction of the secretory signal peptide
+# Prediction of secretory signal peptide presence in Eukaryotic Proteins
 ## Laboratory of Bioinformatics 2 2025/2026 -  Alma Mater Studiorum Università di Bologna
 
 ### Abstract
-Signal peptides are typically short peptides located in the N-terminal of proteins that carry information for protein secretion and are cleaved upon localization. *In-silico* prediction of signal peptides is crucial for functional annotation and localization. 
+Signal peptides are typically short peptides located in the N-terminal of protein sequences that carry information for protein secretion and are cleaved upon localization. *In-silico* prediction of signal peptides is crucial for functional annotation and localization. 
 
 ## 1. Data Collection
 **Objective:** retrieve relevant datasets from UniProtKB.
@@ -35,7 +35,8 @@ Signal peptides are typically short peptides located in the N-terminal of protei
  > Number of results (22/09/2025): **20,615**
 
 ### b. Filter of the positive dataset
-  In order to filter out the sequences with SP shorter than 14 residues, a python script was implemented.
+  In order to filter out the sequences with SP shorter than 14 residues, it was necessary to implement a python script. Infact, such a feature is not retrievable simply using the advanced search tool available in UniProtKB.
+  In the python script generator functions were defined in order to query entries and filter the ones of interest. These were finally saved in a <.tsv> file.
  > The final number of results in the positive dataset was: **2,932**
 
 **STH ABOUT THE API, BATCH, TSV AND FASTA GENERATION**
@@ -50,11 +51,13 @@ Signal peptides are typically short peptides located in the N-terminal of protei
   
 ## 2. Data Preparation
 **Objective:** preprocess datasets for cross-validation and benchmarking.
-	The data was filtered into Positive and Negative datasets. Then each dataset was randomized to make sure the distrubution of the sequences would not bias the model. After that, for each dataset 80% of the data was used to create 5 training sets. The remaining data was labeled for benchmarking.
-	Finally, each training set from one dataset was merged by its counterpart from the other dataset. 
+	The Positive and Negative datasets were clustered in order to avoid redundancy, which would have resulted in biases through the classification methods implementation. 
+	After the clusterization was completed, the list of representative IDs was randomized (for both positive and negative datasets), to make sure the distrubution of the sequences would not bias the model. 
+	Moreover, 80% of the data was used to create 5 training sets while the remaining 20% was labeled for benchmarking for both positive and negative datasets.
+	Finally, each dataset was merged by its counterpart in a tailored <.tsv> file in which features, dataset label and fold label are described. 
 
 
 ## 3. Data visualization
-Using SEABORN and MATPLOTLIB, priliminary evaluation of the data and the distribution of the data among the datasets was performed.
+Using SEABORN and MATPLOTLIB, data were analysed to describe the feature distribution among the datasets.
 Some informative plots and evaluations are available "[LINK TO THE DIRECTORY]"
 ## References 
