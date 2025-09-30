@@ -18,7 +18,10 @@ Signal peptides are typically short peptides located in the N-terminal of protei
   6. Presence of experimentally validated signal peptide: Signal Peptide: * Evidence: Experimental (ft_signal_exp:*)
   7. Filter out proteins with SP shorter than 14 residues (custom filter, see below).
 
-Final query: `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) AND (ft_signal_exp:*)`
+Final query: 
+```bash
+(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) AND (ft_signal_exp:*)
+```
 
  > Number of results (22/09/2025): **2,949**
 
@@ -31,7 +34,10 @@ Final query: `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (frag
   6. Exclude all proteins with any signal peptide: Signal Peptide: * Evidence: Any (NOT ft_signal_exp:*)
   7. Experimentally localized to cytosol, nucleus, mitochondrion, plastid, peroxisome, or cell membrane: Subcellular location term: SL-0173/SL-0191/SL-0173/SL-0204/SL-0209/SL-0039 Evidence: Experimental
 
-Final query: `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) NOT (ft_signal:*) AND ((cc_scl_term_exp:SL-0091) OR (cc_scl_term_exp:SL-0191) OR (cc_scl_term_exp:SL-0173) OR (cc_scl_term_exp:SL-0204) OR (cc_scl_term_exp:SL-0209) OR (cc_scl_term_exp:SL-0039))`
+Final query: 
+```bash
+(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) NOT (ft_signal:*) AND ((cc_scl_term_exp:SL-0091) OR (cc_scl_term_exp:SL-0191) OR (cc_scl_term_exp:SL-0173) OR (cc_scl_term_exp:SL-0204) OR (cc_scl_term_exp:SL-0209) OR (cc_scl_term_exp:SL-0039))
+```
 
  > Number of results (22/09/2025): **20,615**
 
