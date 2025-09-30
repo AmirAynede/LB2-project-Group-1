@@ -47,6 +47,8 @@ A custom Python script was implemented to:
  > The final number of results in the positive dataset was: **2,932**
 
 ### c. Implementation Notes
+
+About the implementation:
 	•	API & Pagination: handled via the UniProtKB REST API (https://rest.uniprot.org/uniprotkb/). Pagination is implemented using the Link header.
 	•	Batch retrieval: results are retrieved in batches of 500 entries.
 	•	Retry mechanism: requests.Session() with retry strategy ensures robustness against temporary server unavailability.
@@ -64,6 +66,7 @@ A custom Python script was implemented to:
 The code for dataset generation is included in data_collection.py.
 
 Execution:
+
 `python data_collection.py --pos_out eukarya_SP_pos.tsv --neg_out eukarya_SP_neg.tsv --pos_fasta pos.fasta --neg_fasta neg.fasta`
 
 Where:
