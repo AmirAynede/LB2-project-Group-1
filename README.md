@@ -2,7 +2,7 @@
 ## Laboratory of Bioinformatics 2 2025/2026 -  Alma Mater Studiorum Università di Bologna
 
 ### Abstract
-Signal peptides are short sequences at the N-terminus of proteins that direct them to the secretory pathway and are typically cleaved after translocation [1](https://www.sciencedirect.com/science/article/pii/S0171933518300189).  *In-silico* prediction of signal peptides is crucial for functional annotation and localization. 
+Signal peptides are short sequences at the N-terminus of proteins that direct them to the secretory pathway and are typically cleaved after translocation [(1)](https://www.sciencedirect.com/science/article/pii/S0171933518300189).  *In-silico* prediction of signal peptides is crucial for functional annotation and localization. 
 
 ## 1. Data Collection 📥
 **Objective:** retrieve positive and negative datasets of eukaryotic proteins from UniProtKB.
