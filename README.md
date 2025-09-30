@@ -68,7 +68,7 @@ A custom Python script was implemented to:
   | Negative  | 2,932  | [eukarya_SP_neg.tsv](data_collection/output/eukarya_SP_neg.tsv), [neg.fasta](data_collection/output/neg.fasta) |
 
 ### e. Reproducibility
-The code for dataset generation is included in data_collection.py[].
+The code for dataset generation is included in [data_collection.py](data_collection/scripts/00_data_collect.py).
 
 Execution:
 
