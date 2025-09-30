@@ -38,21 +38,20 @@ Final query: `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (frag
 ### b. Filtering of the Positive Dataset
 UniProtKB does not directly allow filtering signal peptides by length.
 
-A custom Python script was implemented to:
-	•	Query UniProtKB via its REST API.
-	•	Iterate through JSON results.
-	•	Retain only proteins with signal peptides ≥ 14 residues.
-	•	Export the final datasets in both .tsv and .fasta formats.
+A custom Python script was implemented to:  
+- Query UniProtKB via its REST API  
+- Iterate through JSON results  
+- Retain only proteins with signal peptides ≥ 14 residues  
+- Export the final datasets in both `.tsv` and `.fasta` formats  
   
  > The final number of results in the positive dataset was: **2,932**
 
 ### c. Implementation Notes
 
-About the implementation:
-	•	API & Pagination: handled via the UniProtKB REST API (https://rest.uniprot.org/uniprotkb/). Pagination is implemented using the Link header.
-	•	Batch retrieval: results are retrieved in batches of 500 entries.
-	•	Retry mechanism: requests.Session() with retry strategy ensures robustness against temporary server unavailability.
-	•	Output files: both .tsv (structured metadata) and .fasta (protein sequences) files are generated for downstream analysis.
+- API & Pagination: handled via the UniProtKB REST API (https://rest.uniprot.org/uniprotkb/). Pagination is implemented using the Link header.
+- Batch retrieval: results are retrieved in batches of 500 entries.
+- Retry mechanism: requests.Session() with retry strategy ensures robustness against temporary server unavailability.
+- Output files: both .tsv (structured metadata) and .fasta (protein sequences) files are generated for downstream analysis.
 	
 ### d. Output files
   The final amount of entries in the datasets can be found in the following table:
