@@ -127,6 +127,28 @@ The filtered TSVs contain:
 
 The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](data_split/files/folded_datasets/pos_dss.tsv)
 
+### d. Training and Benchmarking Split
+
+**Randomization:** Representative sequences were randomized to avoid biases.
+**Split of positive and negative datasets:** 
+- 80%: training sets
+- 20%: benchmarking set
+
+### e. 5-Fold Cross-Validation
+- The training set was split into 5 folds while preserving the positive/negative ratio.
+- Each protein’s fold assignment was recorded in the .tsv file for reproducibility (the label 0 means benchmarking set).
+- This ensures that models can be trained and validated without data leakage.
+
+### f. Output
+| Set / Fold | Negative sequences | Positive sequences | Total sequences |
+|------|-----------------|-----------------|----------------|
+| [Benchmarking](data_split/files/training_sets/bench_rand.txt)    | 1,787           | 219             | 2,006          |
+| [Fold 1](data_split/files/training_sets/tr_set1_rand_id.txt)    | 1,430           | 175             | 1,605          |
+| [Fold 2](data_split/files/training_sets/tr_set2_rand_id.txt)    | 1,430           | 175             | 1,605          |
+| [Fold 3](data_split/files/training_sets/tr_set3_rand_id.txt)    | 1,429           | 175             | 1,604          |
+| [Fold 4](data_split/files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
+| [Fold 5](data_split/files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
+
 ## 3. Data visualization
 Using SEABORN and MATPLOTLIB, data were analysed to describe the feature distribution among the datasets.
 Some informative plots and evaluations are available "[LINK TO THE DIRECTORY]"
