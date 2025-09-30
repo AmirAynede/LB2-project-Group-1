@@ -102,10 +102,31 @@ Example command for negative sequences:
 mmseqs easy-cluster ../output/neg.fasta cluster-results-neg tmp --min-seq-id 0.3 -c 0.4 --cov-mode 0 --cluster-mode 1
  ```
 Outcome: Representative sequences were selected from each cluster.
+| Dataset   | Input sequences | No. of clusters | File | 
+|-----------|----------------|----------------|----------------|
+| Positive  | 2,932          | 1,093            | [cluster-results-neg_all_seqs.fasta](data_split/files/cluster_output/cluster-results-neg_all_seqs.fasta)
+| Negative  | 20,615         | 8,934            | [cluster-results-pos_all_seqs.fasta](data_split/files/cluster_output/cluster-results-pos_all_seqs.fasta)
 
 ### b. Extract Representative IDs
 A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files and can be found in [extract_rep_ids.py](data_split/scripts/01_extract_rep_ids.py).
-	
+
+Execution:
+```bash
+python extract_representative_ids.py neg.fasta pos.fasta neg_ids.txt pos_ids.txt
+ ```
+### c. Filter Original TSVs
+The original TSV files were filtered to retain only the representative sequences with the script [organizing_metadata.py](data_split/scripts/02_organizing_metadata.py).
+The filtered TSVs contain:
+- UniProt ID
+- Species
+- Kingdom
+- Sequence length
+- Cleavage site / Transmembrane helix (as relevant)
+- Training/Benchmark label (T/B)
+- Fold assignment (T_id)
+
+The final files are: 
+
 ## 3. Data visualization
 Using SEABORN and MATPLOTLIB, data were analysed to describe the feature distribution among the datasets.
 Some informative plots and evaluations are available "[LINK TO THE DIRECTORY]"
