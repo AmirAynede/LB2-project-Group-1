@@ -125,7 +125,7 @@ The filtered TSVs contain:
 - Training/Benchmark label (T/B)
 - Fold assignment (T_id)
 
-The final files are: 
+The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](data_split/files/folded_datasets/pos_dss.tsv)
 
 ## 3. Data visualization
 Using SEABORN and MATPLOTLIB, data were analysed to describe the feature distribution among the datasets.
