@@ -64,8 +64,8 @@ A custom Python script was implemented to:
   
   | Dataset | No. entries | Output files |
   | ------------- | ------------- | ------------- |
-  | Positive  | 20,615  | eukarya_SP_pos.tsv[data_collection/output/eukarya_SP_pos.tsv], pos.fasta[data_collection/output/pos.fasta] |
-  | Negative  | 2,932  | eukarya_SP_neg.tsv[data_collection/output/eukarya_SP_neg.tsv], neg.fasta[data_collection/output/neg.fasta] |
+  | Positive  | 20,615  | [eukarya_SP_pos.tsv](data_collection/output/eukarya_SP_pos.tsv), [pos.fasta](data_collection/output/pos.fasta) |
+  | Negative  | 2,932  | [eukarya_SP_neg.tsv](data_collection/output/eukarya_SP_neg.tsv), [neg.fasta](data_collection/output/neg.fasta) |
 
 ### e. Reproducibility
 The code for dataset generation is included in data_collection.py[].
