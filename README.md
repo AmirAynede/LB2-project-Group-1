@@ -150,7 +150,46 @@ The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv)
 | [Fold 4](data_split/files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
 | [Fold 5](data_split/files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
 
-## 3. Data visualization
-Using SEABORN and MATPLOTLIB, data were analysed to describe the feature distribution among the datasets.
-Some informative plots and evaluations are available "[LINK TO THE DIRECTORY]"
+## Data Analysis and Visualization 📊
+
+The data visualization step provides insights into the characteristics of the positive and negative protein datasets used in this study. The plots were generated in Python using **matplotlib** and **seaborn**.
+
+### Summary of Analyses
+
+- **Taxonomic Distribution:** Kingdom and species distributions for both training and benchmarking datasets were analyzed to ensure representative sampling across major eukaryotic groups.  
+- **Sequence Length:** Distribution of sequence lengths was compared between positive and negative datasets, as well as between training and benchmarking subsets.  
+- **Signal Peptide (SP) Length:** Length distributions of SPs in the positive dataset were analyzed for both training and benchmarking sequences.  
+- **Amino Acid Composition:** Residue composition of SPs was compared against the SwissProt background distribution.  
+- **Sequence Logos:** Cleavage site motifs of SPs were visualized using [WebLogo](https://weblogo.berkeley.edu/logo.cgi), highlighting conserved positions.
+
+### Plot Summary
+
+| Plot Type | Dataset | Filename | Description |
+|-----------|--------|----------|-------------|
+| Pie & Bar | Positive Training | [pos_t_kingdom.pdf](data_analysis/visualization/pos_t_kingdom.pdf) | Kingdom distribution of positive training sequences |
+| Pie & Bar | Positive Benchmarking | [pos_b_kingdom.pdf](data_analysis/visualization/pos_b_kingdom.pdf)  | Kingdom distribution of positive benchmarking sequences |
+| Pie & Bar | Negative Training | [neg_t_kingdom.pdf](data_analysis/visualization/neg_t_kingdom.pdf) | Kingdom distribution of negative training sequences |
+| Pie & Bar | Negative Benchmarking | [neg_b_kingdom.pdf](data_analysis/visualization/neg_b_kingdom.pdf) | Kingdom distribution of negative benchmarking sequences |
+| Pie & Bar | Positive Training | [pos_t_species.pdf](data_analysis/visualization/pos_t_species.pdf) | Species distribution of positive training sequences |
+| Pie & Bar | Positive Benchmarking | [pos_b_species.pdf](data_analysis/visualization/pos_b_species.pdf) | Species distribution of positive benchmarking sequences |
+| Pie & Bar | Negative Training | [neg_t_species.pdf](data_analysis/visualization/neg_t_species.pdf) | Species distribution of negative training sequences |
+| Pie & Bar | Negative Benchmarking | [neg_b_species.pdf](data_analysis/visualization/neg_b_species.pdf) | Species distribution of negative benchmarking sequences |
+| KDE Plot | All | [Seq_length_posneg.pdf](data_analysis/visualization/Seq_length_posneg.pdf) | Sequence length distribution: positives vs negatives |
+| KDE Plot | Positive | [Seq_length_pos.pdf](data_analysis/visualization/Seq_length_pos.pdf)  | Sequence length: training vs benchmarking |
+| KDE Plot | Negative | [Seq_length_neg.pdf](data_analysis/visualization/Seq_length_neg.pdf)  | Sequence length: training vs benchmarking |
+| Boxplot | All | [Seq_length_posneg_box.pdf](data_analysis/visualization/Seq_length_posneg_box.pdf)  | Sequence length comparison |
+| Boxplot | Positive | [Seq_length_pos_box.pdf](data_analysis/visualization/Seq_length_pos_box.pdf) | Training vs benchmarking |
+| Boxplot | Negative | [Seq_length_neg_box.pdf](data_analysis/visualization/Seq_length_neg_box.pdf) | Training vs benchmarking |
+| Histogram | All | [Seq_length_posneg_hist.pdf](data_analysis/visualization/Seq_length_posneg_hist.pdf) | Sequence length probability distributions |
+| Histogram | Positive | [Seq_length_pos_hist.pdf](data_analysis/visualization/Seq_length_pos_hist.pdf)  | Training vs benchmarking |
+| Histogram | Negative | [Seq_length_neg_hist.pdf](data_analysis/visualization/Seq_length_neg_hist.pdf)  | Training vs benchmarking |
+| KDE | Positive | [SP_length_dist.pdf](data_analysis/visualization/SP_length_length_hist.pdf) | Signal peptide length distribution |
+| Boxplot | Positive | [SP_length_box.pdf](data_analysis/visualization/SP_length_length_box.pdf) | Signal peptide length distribution |
+| Histogram | Positive | [SP_length_hist.pdf](data_analysis/visualization/SP_length_length_hist.pdf) | SP length probability distribution |
+| Bar Plot | All | [residue_composition.pdf](data_analysis/visualization/residue_composition.pdf) | Amino acid composition: Training, Benchmarking, SwissProt |
+| Sequence Logo | Positive | [t_logo.png](data_analysis/visualization/t_logo.png) | SP cleavage site logos Training (via WebLogo) |
+| Sequence Logo | Positive | [b_logo.png](data_analysis/visualization/b_logo.png) | SP cleavage site logos Benchmarking (via WebLogo) |
+
+**Note:** All plots and analyses are reproducible using the uploaded [Data_Visualization.ipynb](data_analysis/scripts/04_Data_Analysis.ipynb) notebook. 
+
 ## References 
