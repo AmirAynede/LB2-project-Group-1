@@ -64,11 +64,11 @@ A custom Python script was implemented to:
   
   | Dataset | No. entries | Output files |
   | ------------- | ------------- | ------------- |
-  | Positive  | 20,615  | eukarya_SP_pos.tsv, pos.fasta |
-  | Negative  | 2,932  | eukarya_SP_neg.tsv, neg.fasta |
+  | Positive  | 20,615  | eukarya_SP_pos.tsv[data_collection/output/eukarya_SP_pos.tsv], pos.fasta[data_collection/output/pos.fasta] |
+  | Negative  | 2,932  | eukarya_SP_neg.tsv[data_collection/output/eukarya_SP_neg.tsv], neg.fasta[data_collection/output/neg.fasta] |
 
 ### e. Reproducibility
-The code for dataset generation is included in data_collection.py.
+The code for dataset generation is included in data_collection.py[].
 
 Execution:
 
@@ -81,16 +81,30 @@ Where:
 - --pos_fasta and --neg_fasta: output FASTA files.
 - The UniProt API queries are embedded in the script (pos_url, neg_url), but can be replaced with custom ones for reproducibility.
   
-## 2. Data Preparation
-**Objective:** preprocess datasets for cross-validation and benchmarking.
+## 2. Data Preparation 🗂️
+**Objective:** Reduce redundancy in the datasets, generate training and benchmarking sets, and create 5-fold cross-validation subsets for robust model evaluation
 
-	The Positive and Negative datasets were clustered in order to avoid redundancy, which would have resulted in biases through the classification methods implementation. 
+### a. Sequence Clustering
+Positive and negative sequences were clustered separately to avoid redundancy, which could bias the classification methods, with MMseqs2.
+Parameters:
+- Minimum sequence identity: 30% (--min-seq-id 0.3)
+- Coverage: 40% (-c 0.4)
+- Coverage mode: 0 (--cov-mode 0)
+- Cluster mode: 1 (--cluster-mode 1)
 
+Example command for positive sequences:
+```bash
+mmseqs easy-cluster ../output/pos.fasta cluster-results-pos tmp --min-seq-id 0.3 -c 0.4 --cov-mode 0 --cluster-mode 1
+ ```
+Example command for negative sequences:
+```bash
+mmseqs easy-cluster ../output/neg.fasta cluster-results-neg tmp --min-seq-id 0.3 -c 0.4 --cov-mode 0 --cluster-mode 1
+ ```
+Outcome: Representative sequences were selected from each cluster.
+
+### b. Extract Representative IDs
+A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files.
 	
-	After the clusterization was completed, the list of representative IDs was randomized (for both positive and negative datasets), to make sure the distrubution of the sequences would not bias the model. 
-	Moreover, 80% of the data was used to create 5 training sets while the remaining 20% was labeled for benchmarking for both positive and negative datasets.
-	Finally, each dataset was merged by its counterpart in a tailored `.tsv` file in which features, dataset label and fold label are reported. 
-
 ## 3. Data visualization
 Using SEABORN and MATPLOTLIB, data were analysed to describe the feature distribution among the datasets.
 Some informative plots and evaluations are available "[LINK TO THE DIRECTORY]"
