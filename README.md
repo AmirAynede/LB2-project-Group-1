@@ -66,7 +66,8 @@ The code for dataset generation is included in data_collection.py.
 
 Execution:
 
-`python data_collection.py --pos_out eukarya_SP_pos.tsv --neg_out eukarya_SP_neg.tsv --pos_fasta pos.fasta --neg_fasta neg.fasta`
+python data_collection.py --pos_out eukarya_SP_pos.tsv --neg_out eukarya_SP_neg.tsv \
+                          --pos_fasta pos.fasta --neg_fasta neg.fasta
 
 Where:
 - --pos_out and --neg_out: output TSV files.
