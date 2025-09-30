@@ -130,6 +130,7 @@ The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv)
 ### d. Training and Benchmarking Split
 
 **Randomization:** Representative sequences were randomized to avoid biases.
+
 **Split of positive and negative datasets:** 
 - 80%: training sets
 - 20%: benchmarking set
