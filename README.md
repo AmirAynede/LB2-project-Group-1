@@ -150,11 +150,11 @@ The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv)
 | [Fold 4](data_split/files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
 | [Fold 5](data_split/files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
 
-## Data Analysis and Visualization 📊
+## 3. Data Analysis and Visualization 📊
 
 The data visualization step provides insights into the characteristics of the positive and negative protein datasets used in this study. The plots were generated in Python using **matplotlib** and **seaborn**.
 
-### Summary of Analyses
+### a. Analyses
 
 - **Taxonomic Distribution:** Kingdom and species distributions for both training and benchmarking datasets were analyzed to ensure representative sampling across major eukaryotic groups.  
 - **Sequence Length:** Distribution of sequence lengths was compared between positive and negative datasets, as well as between training and benchmarking subsets.  
@@ -162,7 +162,7 @@ The data visualization step provides insights into the characteristics of the po
 - **Amino Acid Composition:** Residue composition of SPs was compared against the SwissProt background distribution.  
 - **Sequence Logos:** Cleavage site motifs of SPs were visualized using [WebLogo](https://weblogo.berkeley.edu/logo.cgi), highlighting conserved positions.
 
-### Plot Summary
+### b. Plot Summary
 
 | Plot Type | Dataset | Filename | Description |
 |-----------|--------|----------|-------------|
