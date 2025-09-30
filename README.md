@@ -122,8 +122,8 @@ The filtered TSVs contain:
 - Kingdom
 - Sequence length
 - Cleavage site / Transmembrane helix (as relevant)
-- Training/Benchmark label (T/B)
-- Fold assignment (T_id)
+- Training/Benchmark label 
+- Fold assignment 
 
 The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](data_split/files/folded_datasets/pos_dss.tsv)
 
