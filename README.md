@@ -69,9 +69,9 @@ Execution:
 `python data_collection.py --pos_out eukarya_SP_pos.tsv --neg_out eukarya_SP_neg.tsv --pos_fasta pos.fasta --neg_fasta neg.fasta`
 
 Where:
-	•	--pos_out and --neg_out: output TSV files.
-	•	--pos_fasta and --neg_fasta: output FASTA files.
-	•	The UniProt API queries are embedded in the script (pos_url, neg_url), but can be replaced with custom ones for reproducibility.
+- --pos_out and --neg_out: output TSV files.
+- --pos_fasta and --neg_fasta: output FASTA files.
+- The UniProt API queries are embedded in the script (pos_url, neg_url), but can be replaced with custom ones for reproducibility.
   
 ## 2. Data Preparation
 **Objective:** preprocess datasets for cross-validation and benchmarking.
