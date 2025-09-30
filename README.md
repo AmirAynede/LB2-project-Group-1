@@ -1,4 +1,4 @@
-# Prediction of secretory signal peptide presence in Eukaryotic Proteins
+# Prediction of Secretory Signal Peptide Presence in Eukaryotic Proteins
 ## Laboratory of Bioinformatics 2 2025/2026 -  Alma Mater Studiorum Università di Bologna
 
 ### Abstract
