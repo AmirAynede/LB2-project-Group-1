@@ -86,6 +86,7 @@ Where:
 
 ### a. Sequence Clustering
 Positive and negative sequences were clustered separately to avoid redundancy, which could bias the classification methods, with MMseqs2.
+
 Parameters:
 - Minimum sequence identity: 30% (--min-seq-id 0.3)
 - Coverage: 40% (-c 0.4)
@@ -103,7 +104,7 @@ mmseqs easy-cluster ../output/neg.fasta cluster-results-neg tmp --min-seq-id 0.3
 Outcome: Representative sequences were selected from each cluster.
 
 ### b. Extract Representative IDs
-A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files.
+A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files and can be found in [extract_rep_ids.py](data_split/scripts/01_extract_rep_ids.py).
 	
 ## 3. Data visualization
 Using SEABORN and MATPLOTLIB, data were analysed to describe the feature distribution among the datasets.
