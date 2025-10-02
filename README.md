@@ -190,9 +190,9 @@ The data visualization step provides insights into the characteristics of the po
 | Histogram | All | [Seq_length_TB_hist.pdf](data_analysis/visualization/Seq_length_TB_hist.pdf) | Sequence length probability distributions |
 | Histogram | Positive | [Seq_length_pos_hist.pdf](data_analysis/visualization/Seq_length_pos_hist.pdf)  | Training vs benchmarking |
 | Histogram | Negative | [Seq_length_neg_hist.pdf](data_analysis/visualization/Seq_length_neg_hist.pdf)  | Training vs benchmarking |
-| KDE | Positive | [SP_length_dist.pdf](data_analysis/visualization/SP_length_length_hist.pdf) | Signal peptide length distribution |
-| Boxplot | Positive | [SP_length_box.pdf](data_analysis/visualization/SP_length_length_box.pdf) | Signal peptide length distribution |
-| Histogram | Positive | [SP_length_hist.pdf](data_analysis/visualization/SP_length_length_hist.pdf) | SP length probability distribution |
+| KDE | Positive | [SP_length_dist.pdf](data_analysis/visualization/SP_length__dist.pdf) | Signal peptide length distribution |
+| Boxplot | Positive | [SP_length_box.pdf](data_analysis/visualization/SP_length_box.pdf) | Signal peptide length distribution |
+| Histogram | Positive | [SP_length_hist.pdf](data_analysis/visualization/SP_length_hist.pdf) | SP length probability distribution |
 | Bar Plot | All | [residue_composition.pdf](data_analysis/visualization/residue_composition.pdf) | Amino acid composition: Training, Benchmarking, SwissProt |
 | Sequence Logo | Positive | [t_logo.png](data_analysis/visualization/t_logo.png) | SP cleavage site logos Training (via WebLogo) |
 | Sequence Logo | Positive | [b_logo.png](data_analysis/visualization/b_logo.png) | SP cleavage site logos Benchmarking (via WebLogo) |
