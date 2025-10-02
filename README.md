@@ -166,21 +166,28 @@ The data visualization step provides insights into the characteristics of the po
 
 | Plot Type | Dataset | Filename | Description |
 |-----------|--------|----------|-------------|
+| Pie & Bar | Training | [t_kingdom.pdf](data_analysis/visualization/t_kingdom.pdf) | Kingdom distribution of training sequences |
 | Pie & Bar | Positive Training | [pos_t_kingdom.pdf](data_analysis/visualization/pos_t_kingdom.pdf) | Kingdom distribution of positive training sequences |
-| Pie & Bar | Positive Benchmarking | [pos_b_kingdom.pdf](data_analysis/visualization/pos_b_kingdom.pdf)  | Kingdom distribution of positive benchmarking sequences |
 | Pie & Bar | Negative Training | [neg_t_kingdom.pdf](data_analysis/visualization/neg_t_kingdom.pdf) | Kingdom distribution of negative training sequences |
+| Pie & Bar | Benchmarking | [b_kingdom.pdf](data_analysis/visualization/b_kingdom.pdf) | Kingdom distribution of benchmarking sequences |
+| Pie & Bar | Positive Benchmarking | [pos_b_kingdom.pdf](data_analysis/visualization/pos_b_kingdom.pdf)  | Kingdom distribution of positive benchmarking sequences |
 | Pie & Bar | Negative Benchmarking | [neg_b_kingdom.pdf](data_analysis/visualization/neg_b_kingdom.pdf) | Kingdom distribution of negative benchmarking sequences |
-| Pie & Bar | Positive Training | [pos_t_species.pdf](data_analysis/visualization/pos_t_species.pdf) | Species distribution of positive training sequences |
-| Pie & Bar | Positive Benchmarking | [pos_b_species.pdf](data_analysis/visualization/pos_b_species.pdf) | Species distribution of positive benchmarking sequences |
-| Pie & Bar | Negative Training | [neg_t_species.pdf](data_analysis/visualization/neg_t_species.pdf) | Species distribution of negative training sequences |
-| Pie & Bar | Negative Benchmarking | [neg_b_species.pdf](data_analysis/visualization/neg_b_species.pdf) | Species distribution of negative benchmarking sequences |
+| Pie & Bar | Training | [t_species.pdf](data_analysis/visualization/t_species.pdf) / [t_species_bar.pdf](data_analysis/visualization/t_species_bar.pdf)| Species distribution of training sequences |
+| Pie & Bar | Positive Training | [pos_t_species.pdf](data_analysis/visualization/pos_t_species.pdf) / [pos_t_species_bar.pdf](data_analysis/visualization/pos_t_species_bar.pdf)| Species distribution of positive training sequences |
+| Pie & Bar | Negative Training | [neg_t_species.pdf](data_analysis/visualization/neg_t_species.pdf) / [neg_t_species_bar.pdf](data_analysis/visualization/neg_t_species_bar.pdf)| Species distribution of negative training sequences |
+| Pie & Bar | Benchmarking | [b_species.pdf](data_analysis/visualization/b_species.pdf) / [b_species_bar.pdf](data_analysis/visualization/b_species_bar.pdf) | Species distribution of benchmarking sequences |
+| Pie & Bar | Positive Benchmarking | [pos_b_species.pdf](data_analysis/visualization/pos_b_species.pdf) / [pos_b_species_bar.pdf](data_analysis/visualization/pos_b_species_bar.pdf)| Species distribution of positive benchmarking sequences |
+| Pie & Bar | Negative Benchmarking | [neg_b_species.pdf](data_analysis/visualization/neg_b_species.pdf) / [neg_b_species_bar.pdf](data_analysis/visualization/neg_b_species_bar.pdf)| Species distribution of negative benchmarking sequences |
 | KDE Plot | All | [Seq_length_posneg.pdf](data_analysis/visualization/Seq_length_posneg.pdf) | Sequence length distribution: positives vs negatives |
-| KDE Plot | Positive | [Seq_length_pos.pdf](data_analysis/visualization/Seq_length_pos.pdf)  | Sequence length: training vs benchmarking |
-| KDE Plot | Negative | [Seq_length_neg.pdf](data_analysis/visualization/Seq_length_neg.pdf)  | Sequence length: training vs benchmarking |
+| KDE Plot | All | [Seq_length_TB.pdf](data_analysis/visualization/Seq_length_TB.pdf) | Sequence length distribution: training vs benchmarking |
+| KDE Plot | Positive | [Seq_length_pos.pdf](data_analysis/visualization/Seq_length_pos.pdf)  | Sequence length of positives: training vs benchmarking |
+| KDE Plot | Negative | [Seq_length_neg.pdf](data_analysis/visualization/Seq_length_neg.pdf)  | Sequence length of negatives: training vs benchmarking |
 | Boxplot | All | [Seq_length_posneg_box.pdf](data_analysis/visualization/Seq_length_posneg_box.pdf)  | Sequence length comparison |
+| Boxplot | All | [Seq_length_TB_box.pdf](data_analysis/visualization/Seq_length_TB_box.pdf)  | Sequence length comparison |
 | Boxplot | Positive | [Seq_length_pos_box.pdf](data_analysis/visualization/Seq_length_pos_box.pdf) | Training vs benchmarking |
 | Boxplot | Negative | [Seq_length_neg_box.pdf](data_analysis/visualization/Seq_length_neg_box.pdf) | Training vs benchmarking |
 | Histogram | All | [Seq_length_posneg_hist.pdf](data_analysis/visualization/Seq_length_posneg_hist.pdf) | Sequence length probability distributions |
+| Histogram | All | [Seq_length_TB_hist.pdf](data_analysis/visualization/Seq_length_TB_hist.pdf) | Sequence length probability distributions |
 | Histogram | Positive | [Seq_length_pos_hist.pdf](data_analysis/visualization/Seq_length_pos_hist.pdf)  | Training vs benchmarking |
 | Histogram | Negative | [Seq_length_neg_hist.pdf](data_analysis/visualization/Seq_length_neg_hist.pdf)  | Training vs benchmarking |
 | KDE | Positive | [SP_length_dist.pdf](data_analysis/visualization/SP_length_length_hist.pdf) | Signal peptide length distribution |
@@ -191,6 +198,10 @@ The data visualization step provides insights into the characteristics of the po
 | Sequence Logo | Positive | [b_logo.png](data_analysis/visualization/b_logo.png) | SP cleavage site logos Benchmarking (via WebLogo) |
 
 **Note:** All plots and analyses are reproducible using the uploaded [Data_Visualization.ipynb](data_analysis/scripts/04_Data_Analysis.ipynb) notebook. 
+
+## Major conclusions of data analysis
+
+
 
 ## References 
 1. Owji, Hajar & Nezafat, Navid & Negahdaripour, Manica & HajiEbrahimi, Ali & Younes, Ghasemi. (2018). A Comprehensive Review of Signal Peptides: Structure, Roles, and Applications. European Journal of Cell Biology. 97. 10.1016/j.ejcb.2018.06.003.
