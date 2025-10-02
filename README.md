@@ -200,7 +200,30 @@ The data visualization step provides insights into the characteristics of the po
 **Note:** All plots and analyses are reproducible using the uploaded [Data_Visualization.ipynb](data_analysis/scripts/04_Data_Analysis.ipynb) notebook. 
 
 ## Major conclusions of data analysis
+**Taxonomic distribution:**
+- Kingdom distribution: most proteins belong to Metazoa, followed by Fungi and Viridiplantae. Training and benchmarking sets share a similar taxonomic composition.
+- Species distribution: most proteins belong to Homo sapiens. Training and benchmarking sets share a similar taxonomic composition.
+  
+**Protein sequence length:**
+- Protein length: No significant difference between training (T) and benchmarking (B) sets. So no bias was introduced by data splitting.
+- Positive dataset proteins tend to be shorter.
+- Negative dataset proteins behave more “normally.”
+- Protein length cannot be used to separate datasets.
 
+**Signal peptide length:**
+- Median length ≈ 20–25 residues, consistent with biological expectations.
+- SPs shorter than 14 residues were filtered out.
+
+**Residue composition:**
+- Apolar residues (especially Leucine, Alanine and Valine) are highly enriched; L occurs about twice as frequently compared to SwissProt.
+- Hydrophobic residues dominate, as expected for SPs.
+- Charged residues are underrepresented compared to SwissProt.
+- Overrepresentation of hydrophobic/apolar residues and underrepresentation of charged residues can be exploited as SP features.
+
+**Sequence logo:**
+- Clear hydrophobic core observed in the peptide before the cleavage site.
+- Conserved cleavage site motif: X-Ala-X.
+- Training vs. benchmarking: No major compositional differences detected, whcich translates to good dataset splitting.
 
 
 ## References 
