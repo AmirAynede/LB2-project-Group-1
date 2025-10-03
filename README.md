@@ -104,8 +104,8 @@ mmseqs easy-cluster ../output/neg.fasta cluster-results-neg tmp --min-seq-id 0.3
 Outcome: Representative sequences were selected from each cluster.
 | Dataset   | Input sequences | No. of clusters | File | 
 |-----------|----------------|----------------|----------------|
-| Positive  | 2,932          | 1,093            | [cluster-results-pos_rep_seqs.fasta](data_split/files/cluster_output/cluster-results-pos_rep_seq.fasta)
-| Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seqs.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta)
+| Positive  | 2,932          | 1,093            | [cluster-results-pos_rep_seq.fasta](data_split/files/cluster_output/cluster-results-pos_rep_seq.fasta)
+| Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta)
 
 ### b. Extract Representative IDs
 A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files and can be found in [extract_rep_ids.py](data_split/scripts/01_extract_rep_ids.py).
