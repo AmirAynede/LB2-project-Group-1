@@ -46,7 +46,6 @@ The full description of the procedure can be found in the [README.md](data_split
 | Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta) |
 
 **Extract Representative IDs and Metadata Collection**
-
 The ID lists were randomized and split. The output files were used to filter the collective .tsv file. Two .tsv files were obtained to organize metadata related to positive and negative datasets.
 
 | Section | Scripts | Files | 
@@ -65,11 +64,10 @@ The ID lists were randomized and split. The output files were used to filter the
 | [Fold 5](files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
 
 ## 3. Data Analysis and Visualization 📊
-
+**Objective:** understand the structure and characteristics of the dataset.
 The data visualization step provides insights into the characteristics of the positive and negative protein datasets used in this study. The plots were generated in Python using **matplotlib** and **seaborn**.
 
 ### a. Analyses
-
 - **Taxonomic Distribution:** Kingdom and species distributions for both training and benchmarking datasets were analyzed to ensure representative sampling across major eukaryotic groups.  
 - **Sequence Length:** Distribution of sequence lengths was compared between positive and negative datasets, as well as between training and benchmarking subsets.  
 - **Signal Peptide (SP) Length:** Length distributions of SPs in the positive dataset were analyzed for both training and benchmarking sequences.  
@@ -77,7 +75,6 @@ The data visualization step provides insights into the characteristics of the po
 - **Sequence Logos:** Cleavage site motifs of SPs were visualized using [WebLogo](https://weblogo.berkeley.edu/logo.cgi), highlighting conserved positions.
 
 ### b. Plot Summary
-
 | Plot Type | Dataset | Filename | Description |
 |-----------|--------|----------|-------------|
 | Pie & Bar | Training | [t_kingdom.pdf](data_analysis/visualization/t_kingdom.pdf) | Kingdom distribution of training sequences |
