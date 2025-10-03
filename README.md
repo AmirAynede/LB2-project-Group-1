@@ -6,7 +6,7 @@ Signal peptides are short sequences at the N-terminus of proteins that direct th
 
 ## 1. Data Collection 📥
 **Objective:** retrieve positive and negative datasets of eukaryotic proteins from UniProtKB.
-The full description of the procedure can be found in the [README.md](data_collection/README.md) of the data_colection foler.
+The full description of the procedure can be found in the [README.md](data_collection/README.md) of the data_colection folder.
 
 ### Workflow
   | Section | Title |
@@ -20,12 +20,9 @@ The full description of the procedure can be found in the [README.md](data_colle
 ### Results
   | Datasets | Positive | Negative |
   | ------------- | ------------- | ------------- |
-  | Query | (existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) AND (ft_signal_exp:*)| (existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) NOT (ft_signal:*) AND ((cc_scl_term_exp:SL-0091) OR (cc_scl_term_exp:SL-0191) OR (cc_scl_term_exp:SL-0173) OR (cc_scl_term_exp:SL-0204) OR (cc_scl_term_exp:SL-0209) OR (cc_scl_term_exp:SL-0039)) |
-  | No. entries | Before filtering: 2,949 \ After filtering: 2,932| 20,615 |
-  | Output | [eukarya_SP_pos.tsv](data_collection/output/eukarya_SP_pos.tsv) \ [pos.fasta](data_collection/output/pos.fasta) | [eukarya_SP_neg.tsv](data_collection/output/eukarya_SP_neg.tsv) \ [neg.fasta](data_collection/output/neg.fasta) |
-  
-
-### Results
+  | Query | `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) AND (ft_signal_exp:*)`| `(existence:1) AND (length:[40 TO *]) AND (reviewed:true) AND (fragment:false) AND (taxonomy_id:2759) NOT (ft_signal:*) AND ((cc_scl_term_exp:SL-0091) OR (cc_scl_term_exp:SL-0191) OR (cc_scl_term_exp:SL-0173) OR (cc_scl_term_exp:SL-0204) OR (cc_scl_term_exp:SL-0209) OR (cc_scl_term_exp:SL-0039))` |
+  | No. entries | Before filtering: 2,949, After filtering: 2,932| 20,615 |
+  | Output | [eukarya_SP_pos.tsv](data_collection/output/eukarya_SP_pos.tsv); [pos.fasta](data_collection/output/pos.fasta) | [eukarya_SP_neg.tsv](data_collection/output/eukarya_SP_neg.tsv); [neg.fasta](data_collection/output/neg.fasta) |
 
 ## 2. Data Preparation 🗂️
 **Objective:** Reduce redundancy in the datasets, generate training and benchmarking sets, and create 5-fold cross-validation subsets for robust model evaluation
