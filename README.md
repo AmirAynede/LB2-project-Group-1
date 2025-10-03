@@ -12,7 +12,7 @@ The full description of the procedure can be found in the [README.md](data_colle
   | Section | Title |
   | :---:  | :---:  |
   |a| Selection criteria |
-  |b| Filtering of the Positive Dataset | 
+  |b| Filtering the Positive Dataset | 
   |c| Implementation notes|
   |d| Output files | 
   |e| Reproducibility |
@@ -26,72 +26,42 @@ The full description of the procedure can be found in the [README.md](data_colle
 
 ## 2. Data Preparation 🗂️
 **Objective:** Reduce redundancy in the datasets, generate training and benchmarking sets, and create 5-fold cross-validation subsets for robust model evaluation
+The full description of the procedure can be found in the [README.md](data_split/README.md) of the data_split folder.
 
-### a. Sequence Clustering
-Positive and negative sequences were clustered separately to avoid redundancy, which could bias the classification methods, with MMseqs2.
+### Workflow
+  | Section | Title |
+  | :---:  | :---:  |
+  |a| Clustering |
+  |b| Extract Representative IDs | 
+  |c| Metadata collection |
+  |d| Data Splitting and Cross-Validation | 
+  |e| Output |
+  
+### Results
 
-Parameters:
-- Minimum sequence identity: 30% (--min-seq-id 0.3)
-- Coverage: 40% (-c 0.4)
-- Coverage mode: 0 (--cov-mode 0)
-- Cluster mode: 1 (--cluster-mode 1)
-
-Example command for positive sequences:
-```bash
-mmseqs easy-cluster ../output/pos.fasta cluster-results-pos tmp --min-seq-id 0.3 -c 0.4 --cov-mode 0 --cluster-mode 1
- ```
-Example command for negative sequences:
-```bash
-mmseqs easy-cluster ../output/neg.fasta cluster-results-neg tmp --min-seq-id 0.3 -c 0.4 --cov-mode 0 --cluster-mode 1
- ```
-Outcome: Representative sequences were selected from each cluster.
+**Clustering**
 | Dataset   | Input sequences | No. of clusters | File | 
-|-----------|----------------|----------------|----------------|
-| Positive  | 2,932          | 1,093            | [cluster-results-pos_rep_seq.fasta](data_split/files/cluster_output/cluster-results-pos_rep_seq.fasta)
-| Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta)
+|:---:|:---:|:---:|:---:|
+| Positive  | 2,932          | 1,093            | [cluster-results-pos_rep_seq.fasta](data_split/files/cluster_output/cluster-results-pos_rep_seq.fasta) |
+| Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta) |
 
-### b. Extract Representative IDs
-A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files and can be found in [extract_rep_ids.py](data_split/scripts/01_extract_rep_ids.py).
+**Extract Representative IDs and Metadata Collection**
+The ID lists were randomized and split. The output files were used to filter the collective .tsv file. Two .tsv files were obtained to organize metadata related to positive and negative datasets.
 
-Execution:
-```bash
-python extract_representative_ids.py neg.fasta pos.fasta neg_ids.txt pos_ids.txt
- ```
-### c. Filter Original TSVs
-The original TSV files were filtered to retain only the representative sequences with the script [organizing_metadata.py](data_split/scripts/02_organizing_metadata.py).
-The filtered TSVs contain:
-- UniProt ID
-- Species
-- Kingdom
-- Sequence length
-- Cleavage site / Transmembrane helix (as relevant)
-- Training/Benchmark label 
-- Fold assignment 
+| Section | Scripts | Files | 
+|:---:|:---:|:---:|
+| b  | [extract_rep_ids.py](data_split/scripts/01_extract_rep_ids.py)            | [neg_rep_id.txt](data_split/files/cluster_output/neg_rep_id.txt) <br> [pos_rep_id.txt](data_split/files/cluster_output/pos_rep_id.txt) |
+| c  | 20,615         | [organizing_metadata.py](data_split/scripts/02_organizing_metadata.py)           | [[neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](data_spit/files/folded_datasets/pos_dss.tsv) | 
 
-The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](data_split/files/folded_datasets/pos_dss.tsv)
-
-### d. Training and Benchmarking Split
-
-**Randomization:** Representative sequences were randomized to avoid biases.
-
-**Split of positive and negative datasets:** 
-- 80%: training sets
-- 20%: benchmarking set
-
-### e. 5-Fold Cross-Validation
-- The training set was split into 5 folds while preserving the positive/negative ratio.
-- Each protein’s fold assignment was recorded in the .tsv file for reproducibility (the label 0 means benchmarking set).
-- This ensures that models can be trained and validated without data leakage.
-
-### f. Output
+**Output**
 | Set / Fold | Negative sequences | Positive sequences | Total sequences |
 |------|-----------------|-----------------|----------------|
-| [Benchmarking](data_split/files/training_sets/bench_rand.txt)    | 1,787           | 219             | 2,006          |
-| [Fold 1](data_split/files/training_sets/tr_set1_rand_id.txt)    | 1,430           | 175             | 1,605          |
-| [Fold 2](data_split/files/training_sets/tr_set2_rand_id.txt)    | 1,430           | 175             | 1,605          |
-| [Fold 3](data_split/files/training_sets/tr_set3_rand_id.txt)    | 1,429           | 175             | 1,604          |
-| [Fold 4](data_split/files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
-| [Fold 5](data_split/files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
+| [Benchmarking](files/training_sets/bench_rand.txt)    | 1,787           | 219             | 2,006          |
+| [Fold 1](files/training_sets/tr_set1_rand_id.txt)    | 1,430           | 175             | 1,605          |
+| [Fold 2](files/training_sets/tr_set2_rand_id.txt)    | 1,430           | 175             | 1,605          |
+| [Fold 3](files/training_sets/tr_set3_rand_id.txt)    | 1,429           | 175             | 1,604          |
+| [Fold 4](files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
+| [Fold 5](files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
 
 ## 3. Data Analysis and Visualization 📊
 
