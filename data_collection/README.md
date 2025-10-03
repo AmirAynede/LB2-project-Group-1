@@ -1,4 +1,4 @@
-## 1. Data Collection 📥
+## Data Collection 📥
 **Objective:** retrieve positive and negative datasets of eukaryotic proteins from UniProtKB.
 
 ### a. Selection criteria
@@ -58,11 +58,11 @@ A custom Python script was implemented to:
   
   | Dataset | No. entries | Output files |
   | :---:  | :---:  | :---:  |
-  | Positive  | 20,615  | [eukarya_SP_pos.tsv](data_collection/output/eukarya_SP_pos.tsv) <br> [pos.fasta](data_collection/output/pos.fasta) |
-  | Negative  | 2,932  | [eukarya_SP_neg.tsv](data_collection/output/eukarya_SP_neg.tsv) <br> [neg.fasta](data_collection/output/neg.fasta) |
+  | Positive  | 20,615  | [eukarya_SP_pos.tsv](output/eukarya_SP_pos.tsv) <br> [pos.fasta](output/pos.fasta) |
+  | Negative  | 2,932  | [eukarya_SP_neg.tsv](output/eukarya_SP_neg.tsv) <br> [neg.fasta](output/neg.fasta) |
 
 ### e. Reproducibility
-The code for dataset generation is included in [data_collection.py](data_collection/scripts/00_data_collect.py).
+The code for dataset generation is included in [data_collection.py](scripts/00_data_collect.py).
 
 Execution:
 
@@ -75,3 +75,4 @@ Where:
 - --pos_fasta and --neg_fasta: output FASTA files.
 - The UniProt API queries are embedded in the script (pos_url, neg_url), but can be replaced with custom ones for reproducibility.
   
+
