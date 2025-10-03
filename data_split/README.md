@@ -58,7 +58,7 @@ The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv)
 
 | Set / Fold | Negative sequences ID file | Positive sequences ID file | 
 |:---:|:---:|:---:|
-| Benchmarking    | [neg_bench_id.txt](data_split/files/cluster_output/neg_bench_id.txt)           | [pos_bench.txt](data_split/files/cluster_output/pos_bench.txt)               | 
+| Benchmarking    | [neg_bench_id.txt](files/cluster_output/neg_bench_id.txt)           | [pos_bench.txt](files/cluster_output/pos_bench.txt)               | 
 | Fold 1    | [neg_tr1_id.txt](data_split/files/cluster_output/neg_tr1_id.txt)               | [pos_tr1_id.txt](data_split/files/cluster_output/pos_tr1_id.txt)            | 
 | Fold 2    | [neg_tr2_id.txt](data_split/files/cluster_output/neg_tr2_id.txt)            | [pos_tr2_id.txt](data_split/files/cluster_output/pos_tr2_id.txt)             | 
 | Fold 3    | [neg_tr3_id.txt](data_split/files/cluster_output/neg_tr3_id.txt)            | [pos_tr3_id.txt](data_split/files/cluster_output/pos_tr3_id.txt)            | 
