@@ -55,7 +55,7 @@ The ID lists were randomized and split. The output files were used to filter the
 
 **Output**
 | Set / Fold | Negative sequences | Positive sequences | Total sequences |
-|------|-----------------|-----------------|----------------|
+|:---: |:---: |:---: |:---: |
 | [Benchmarking](files/training_sets/bench_rand.txt)    | 1,787           | 219             | 2,006          |
 | [Fold 1](files/training_sets/tr_set1_rand_id.txt)    | 1,430           | 175             | 1,605          |
 | [Fold 2](files/training_sets/tr_set2_rand_id.txt)    | 1,430           | 175             | 1,605          |
