@@ -46,6 +46,7 @@ The full description of the procedure can be found in the [README.md](data_split
 | Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta) |
 
 **Extract Representative IDs and Metadata Collection**
+
 The ID lists were randomized and split. The output files were used to filter the collective .tsv file. Two .tsv files were obtained to organize metadata related to positive and negative datasets.
 
 | Section | Scripts | Files | 
