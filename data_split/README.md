@@ -29,9 +29,13 @@ A custom Python script was used to extract the IDs of representative sequences f
 
 Execution:
 ```bash
-python extract_representative_ids.py neg.fasta pos.fasta neg_ids.txt pos_ids.txt
+python extract_representative_ids.py neg.fasta pos.fasta neg_rep_id.txt pos_rep_id.txt
  ```
+The final files are: [neg_rep_id.txt](files/cluster_output/neg_rep_id.txt) and [pos_rep_id.txt](files/cluster_output/pos_rep_id.txt).
+
 ### c. Metadata Collection
+**Randomization:** Representative sequences were randomized to avoid biases. The final files are: [neg_rand_id.txt](files/cluster_output/neg_rand_id.txt) and [pos_rand_id.txt](files/cluster_output/pos_rand_id.txt).
+
 The original TSV files were filtered to retain only the representative sequences with the script [organizing_metadata.py](scripts/02_organizing_metadata.py).
 The filtered TSVs contain:
 - UniProt ID
@@ -42,11 +46,9 @@ The filtered TSVs contain:
 - Training/Benchmark label 
 - Fold assignment 
 
-The final files are: [neg_dss.tsv](files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](files/folded_datasets/pos_dss.tsv)
+The final files are: [neg_dss.tsv](files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](files/folded_datasets/pos_dss.tsv).
 
 ### d. Data Splitting and Cross-Validation
-**Randomization:** Representative sequences were randomized to avoid biases.
-
 **Split of positive and negative datasets:** 
 - 80%: training sets
 - 20%: benchmarking set
