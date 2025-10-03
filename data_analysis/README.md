@@ -1,5 +1,5 @@
 ## Data Analysis and Visualization 📊
-
+**Objective:** understand the structure and characteristics of the dataset.
 The data visualization step provides insights into the characteristics of the positive and negative protein datasets used in this study. The plots were generated in Python using **matplotlib** and **seaborn**.
 
 ### a. Analyses
