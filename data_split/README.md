@@ -21,18 +21,18 @@ mmseqs easy-cluster ../output/neg.fasta cluster-results-neg tmp --min-seq-id 0.3
 Outcome: Representative sequences were selected from each cluster.
 | Dataset   | Input sequences | No. of clusters | File | 
 |:---:|:---:|:---:|:---:|
-| Positive  | 2,932          | 1,093            | [cluster-results-pos_rep_seq.fasta](data_split/files/cluster_output/cluster-results-pos_rep_seq.fasta)
-| Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta)
+| Positive  | 2,932          | 1,093            | [cluster-results-pos_rep_seq.fasta](files/cluster_output/cluster-results-pos_rep_seq.fasta)
+| Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](files/cluster_output/cluster-results-neg_rep_seq.fasta)
 
 ### b. Extract Representative IDs
-A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files and can be found in [extract_rep_ids.py](data_split/scripts/01_extract_rep_ids.py).
+A custom Python script was used to extract the IDs of representative sequences from the clustered FASTA files and can be found in [extract_rep_ids.py](scripts/01_extract_rep_ids.py).
 
 Execution:
 ```bash
 python extract_representative_ids.py neg.fasta pos.fasta neg_ids.txt pos_ids.txt
  ```
 ### c. Metadata Collection
-The original TSV files were filtered to retain only the representative sequences with the script [organizing_metadata.py](data_split/scripts/02_organizing_metadata.py).
+The original TSV files were filtered to retain only the representative sequences with the script [organizing_metadata.py](scripts/02_organizing_metadata.py).
 The filtered TSVs contain:
 - UniProt ID
 - Species
@@ -42,7 +42,7 @@ The filtered TSVs contain:
 - Training/Benchmark label 
 - Fold assignment 
 
-The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](data_split/files/folded_datasets/pos_dss.tsv)
+The final files are: [neg_dss.tsv](files/folded_datasets/neg_dss.tsv) and [pos_dss.tsv](files/folded_datasets/pos_dss.tsv)
 
 ### d. Data Splitting and Cross-Validation
 **Randomization:** Representative sequences were randomized to avoid biases.
@@ -59,19 +59,19 @@ The final files are: [neg_dss.tsv](data_split/files/folded_datasets/neg_dss.tsv)
 | Set / Fold | Negative sequences ID file | Positive sequences ID file | 
 |:---:|:---:|:---:|
 | Benchmarking    | [neg_bench_id.txt](files/cluster_output/neg_bench_id.txt)           | [pos_bench.txt](files/cluster_output/pos_bench.txt)               | 
-| Fold 1    | [neg_tr1_id.txt](data_split/files/cluster_output/neg_tr1_id.txt)               | [pos_tr1_id.txt](data_split/files/cluster_output/pos_tr1_id.txt)            | 
-| Fold 2    | [neg_tr2_id.txt](data_split/files/cluster_output/neg_tr2_id.txt)            | [pos_tr2_id.txt](data_split/files/cluster_output/pos_tr2_id.txt)             | 
-| Fold 3    | [neg_tr3_id.txt](data_split/files/cluster_output/neg_tr3_id.txt)            | [pos_tr3_id.txt](data_split/files/cluster_output/pos_tr3_id.txt)            | 
-| Fold 4    | [neg_tr4_id.txt](data_split/files/cluster_output/neg_tr4_id.txt)            | [pos_tr4_id.txt](data_split/files/cluster_output/pos_tr4_id.txt)            | 
-| Fold 5    | [neg_tr5_id.txt](data_split/files/cluster_output/neg_tr5_id.txt)            | [pos_tr5_id.txt](data_split/files/cluster_output/pos_tr5_id.txt)            | 
+| Fold 1    | [neg_tr1_id.txt](files/cluster_output/neg_tr1_id.txt)               | [pos_tr1_id.txt](files/cluster_output/pos_tr1_id.txt)            | 
+| Fold 2    | [neg_tr2_id.txt](files/cluster_output/neg_tr2_id.txt)            | [pos_tr2_id.txt](files/cluster_output/pos_tr2_id.txt)             | 
+| Fold 3    | [neg_tr3_id.txt](files/cluster_output/neg_tr3_id.txt)            | [pos_tr3_id.txt](files/cluster_output/pos_tr3_id.txt)            | 
+| Fold 4    | [neg_tr4_id.txt](files/cluster_output/neg_tr4_id.txt)            | [pos_tr4_id.txt](files/cluster_output/pos_tr4_id.txt)            | 
+| Fold 5    | [neg_tr5_id.txt](files/cluster_output/neg_tr5_id.txt)            | [pos_tr5_id.txt](files/cluster_output/pos_tr5_id.txt)            | 
 
 
 ### e. Output
 | Set / Fold | Negative sequences | Positive sequences | Total sequences |
 |------|-----------------|-----------------|----------------|
-| [Benchmarking](data_split/files/training_sets/bench_rand.txt)    | 1,787           | 219             | 2,006          |
-| [Fold 1](data_split/files/training_sets/tr_set1_rand_id.txt)    | 1,430           | 175             | 1,605          |
-| [Fold 2](data_split/files/training_sets/tr_set2_rand_id.txt)    | 1,430           | 175             | 1,605          |
-| [Fold 3](data_split/files/training_sets/tr_set3_rand_id.txt)    | 1,429           | 175             | 1,604          |
-| [Fold 4](data_split/files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
-| [Fold 5](data_split/files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
+| [Benchmarking](files/training_sets/bench_rand.txt)    | 1,787           | 219             | 2,006          |
+| [Fold 1](files/training_sets/tr_set1_rand_id.txt)    | 1,430           | 175             | 1,605          |
+| [Fold 2](files/training_sets/tr_set2_rand_id.txt)    | 1,430           | 175             | 1,605          |
+| [Fold 3](files/training_sets/tr_set3_rand_id.txt)    | 1,429           | 175             | 1,604          |
+| [Fold 4](files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
+| [Fold 5](files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
