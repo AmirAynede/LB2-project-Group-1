@@ -6,6 +6,7 @@ Signal peptides are short sequences at the N-terminus of proteins that direct th
 
 ## 1. Data Collection 📥
 **Objective:** retrieve positive and negative datasets of eukaryotic proteins from UniProtKB.
+
 The full description of the procedure can be found in the [README.md](data_collection/README.md) of the data_colection folder.
 
 ### Workflow
@@ -26,6 +27,7 @@ The full description of the procedure can be found in the [README.md](data_colle
 
 ## 2. Data Preparation 🗂️
 **Objective:** Reduce redundancy in the datasets, generate training and benchmarking sets, and create 5-fold cross-validation subsets for robust model evaluation
+
 The full description of the procedure can be found in the [README.md](data_split/README.md) of the data_split folder.
 
 ### Workflow
@@ -46,6 +48,7 @@ The full description of the procedure can be found in the [README.md](data_split
 | Negative  | 20,615         | 8,934            | [cluster-results-neg_rep_seq.fasta](data_split/files/cluster_output/cluster-results-neg_rep_seq.fasta) |
 
 **Extract Representative IDs and Metadata Collection**
+
 The ID lists were randomized and split. The output files were used to filter the collective .tsv file. Two .tsv files were obtained to organize metadata related to positive and negative datasets.
 
 | Section | Scripts | Files | 
@@ -65,6 +68,7 @@ The ID lists were randomized and split. The output files were used to filter the
 
 ## 3. Data Analysis and Visualization 📊
 **Objective:** understand the structure and characteristics of the dataset.
+
 The data visualization step provides insights into the characteristics of the positive and negative protein datasets used in this study. The plots were generated in Python using **matplotlib** and **seaborn**.
 
 ### a. Analyses
