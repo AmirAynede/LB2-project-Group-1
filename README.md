@@ -4,7 +4,7 @@
 ### Abstract
 Signal peptides are short sequences at the N-terminus of proteins that direct them to the secretory pathway and are typically cleaved after translocation [(1)](https://www.sciencedirect.com/science/article/pii/S0171933518300189).  *In-silico* prediction of signal peptides is crucial for functional annotation and localization. 
 
-## 1. Data Collection 📥
+## 1. Data Collection 
 **Objective:** retrieve positive and negative datasets of eukaryotic proteins from UniProtKB.
 
 The full description of the procedure can be found in the [README.md](data_collection/README.md) of the data_colection folder.
@@ -25,7 +25,7 @@ The full description of the procedure can be found in the [README.md](data_colle
   | No. entries | Before filtering: 2,949 <br> After filtering: 2,932| 20,615 |
   | Output | [eukarya_SP_pos.tsv](data_collection/output/eukarya_SP_pos.tsv) <br> [pos.fasta](data_collection/output/pos.fasta) | [eukarya_SP_neg.tsv](data_collection/output/eukarya_SP_neg.tsv) <br> [neg.fasta](data_collection/output/neg.fasta) |
 
-## 2. Data Preparation 🗂️
+## 2. Data Preparation 
 **Objective:** Reduce redundancy in the datasets, generate training and benchmarking sets, and create 5-fold cross-validation subsets for robust model evaluation
 
 The full description of the procedure can be found in the [README.md](data_split/README.md) of the data_split folder.
@@ -35,7 +35,7 @@ The full description of the procedure can be found in the [README.md](data_split
   | :---:  | :---:  |
   |a| Clustering |
   |b| Extract Representative IDs | 
-  |c| Metadata collection |
+  |c| Metadata Collection |
   |d| Data Splitting and Cross-Validation | 
   |e| Output |
   
@@ -66,7 +66,7 @@ The ID lists were randomized and split. The output files were used to filter the
 | [Fold 4](files/training_sets/tr_set4_rand_id.txt)    | 1,429           | 175             | 1,604          |
 | [Fold 5](files/training_sets/tr_set5_rand_id.txt)    | 1,429           | 174             | 1,603          |
 
-## 3. Data Analysis and Visualization 📊
+## 3. Data Analysis and Visualization 
 **Objective:** understand the structure and characteristics of the dataset.
 
 The data visualization step provides insights into the characteristics of the positive and negative protein datasets used in this study. The plots were generated in Python using **matplotlib** and **seaborn**.
@@ -94,5 +94,31 @@ The data visualization step provides insights into the characteristics of the po
 
 **Note:** All plots and analyses are reproducible using the uploaded [Data_Visualization.ipynb](data_analysis/scripts/04_Data_Analysis.ipynb) notebook. 
 
+## 4. The vonHeijne method for SP detection 
+**Objective:** classify sequences with respect to the presence of a SP.
+
+### Workflow
+  | Section | Title |
+  | :---:  | :---:  |
+  |a| **Data Organization** |
+  |b| **Training** |
+  |b.1| Position-Specific Weight Matrix Computation | 
+  |c| **Validation**|
+  |c.1| Sequence Scoring |
+  |c.2| Optimal Threshold Selection|
+  |d| **Testing**|
+  |d.1| Sequences Classification| 
+  |e| **Performance Evaluation**| 
+
+### Results
+  | Metric | Value |
+  | :---:  | :---:  |
+  |Accuracy| 0.9320 ± 0.0085| 
+  |Precision| 0.6830 ± 0.0646| 
+  |Recall| 0.7300 ± 0.0560| 
+  |F1 Score| 0.7012 ± 0.0226| 
+  |MCC| 0.6664 ± 0.0258|
+  |Threshold| 8.8089 ± 0.5967| 
+  
 ## References 
 1. Owji, Hajar & Nezafat, Navid & Negahdaripour, Manica & HajiEbrahimi, Ali & Younes, Ghasemi. (2018). A Comprehensive Review of Signal Peptides: Structure, Roles, and Applications. European Journal of Cell Biology. 97. 10.1016/j.ejcb.2018.06.003.
