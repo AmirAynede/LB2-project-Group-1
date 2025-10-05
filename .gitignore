@@ -1,2 +1,6 @@
 .zshrc
 */tmp/*
+.DS_Store
+data_collection/.DS_Store
+data_collection/output/.Rhistory
+data_collection/scripts/.DS_Store
