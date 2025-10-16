@@ -12,9 +12,9 @@ Each position in the fragment is scored according to the log-ratio between obser
 
 **Formula:**
 
-\[
+$$
 \text{PSWM}_{i,j} = \log_2 \left( \frac{f_{i,j} + 1}{p_i} \right)
-\]
+$$
 
 where:  
 - \( f_{i,j} \) = frequency of amino acid \( i \) at position \( j \) in the training fragments  
