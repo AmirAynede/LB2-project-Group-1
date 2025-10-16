@@ -112,7 +112,7 @@ The full description of the procedure can be found in the [README.md](data_analy
   |d.1| Sequences Classification| 
   |e| **Performance Evaluation**| 
   
-The detailed workflow and implementation can be found in the [`von_Heijne/`](von_Heijne/) directory.
+The detailed workflow and implementation can be found in the [`von_Heijne/`](vonHeijne/) directory.
 
 ### Results
   | Metric | Value |
@@ -123,8 +123,6 @@ The detailed workflow and implementation can be found in the [`von_Heijne/`](von
   |F1 Score| 0.7012 ± 0.0226| 
   |MCC| 0.6664 ± 0.0258|
   |Threshold| 8.8089 ± 0.5967| 
-
-### 
   
 ## References 
 1. Owji, Hajar & Nezafat, Navid & Negahdaripour, Manica & HajiEbrahimi, Ali & Younes, Ghasemi. (2018). A Comprehensive Review of Signal Peptides: Structure, Roles, and Applications. European Journal of Cell Biology. 97. 10.1016/j.ejcb.2018.06.003.
