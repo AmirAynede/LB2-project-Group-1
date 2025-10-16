@@ -1,4 +1,4 @@
-## Data Preparation 🗂️
+## Data Preparation 
 **Objective:** Reduce redundancy in the datasets, generate training and benchmarking sets, and create 5-fold cross-validation subsets for robust model evaluation
 
 ### a. Clustering
