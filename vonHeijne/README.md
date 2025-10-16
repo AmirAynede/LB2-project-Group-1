@@ -12,11 +12,14 @@ Each position in the fragment is scored according to the log-ratio between obser
 
 **Formula:**
 \[
-PSWM_{ij} = \log_2 \left( \frac{f_{ij} + 1}{p_j} \right)
+\text{PSWM}_{i,j} = \log_2 \left( \frac{f_{i,j} + 1}{p_i} \right)
 \]
-where \( f_{ij} \) is the frequency of amino acid *i* at position *j*, and \( p_j \) is the background frequency.
 
-**Visualization:** PSWM heatmaps (`PSWM_roundX.pdf` and `PSWMs_all_rounds.pdf`) are generated to visualize the positional amino acid preferences. Annotated log2 enrichment scores highlight over- and under-represented residues, confirming hydrophobic enrichment and the canonical **A–X–A motif**.
+where:  
+- \( f_{i,j} \) = frequency of amino acid \( i \) at position \( j \) in the training fragments  
+- \( p_i \) = background frequency of amino acid \( i \) in SwissProt
+
+**Visualization:** PSWM heatmaps were generated to visualize the positional amino acid preferences. Annotated log2 enrichment scores highlighted over- and under-represented residues, confirming hydrophobic enrichment and the canonical **A–X–A motif**.
 
 ### c. Validation
 #### c.1 Sequence Scoring
@@ -27,12 +30,12 @@ The **maximum PSWM score** across the window is retained as the sequence score.
 Precision–Recall curves were computed using validation data.  
 The **F1-maximizing threshold** was selected for each round.
 
-**Visualization:** Precision–Recall curves (`PRC_roundX.pdf` and `PRC_all_rounds.pdf`) show model performance per fold and combined across folds. Optimal thresholds are highlighted to indicate the best trade-off between precision and recall.
+**Visualization:** Precision–Recall curves were used to show model performance per fold and combined across folds. Optimal thresholds were highlighted to indicate the best trade-off between precision and recall.
 
 ### d. Testing
 #### d.1 Sequences Classification
 Sequences from the test fold were scored using the trained PSWM and classified according to the optimal threshold from the corresponding validation fold.
-**Visualization:** Confusion matrices (`CM_roundX.pdf` and `CM_all_rounds.pdf`) display true positives, true negatives, false positives, and false negatives. Colored cells enhance visual distinction between correct and incorrect predictions.
+**Visualization:** Confusion matrices were used to display true positives, true negatives, false positives, and false negatives. Colored cells enhanced visual distinction between correct and incorrect predictions.
 
 ### e. Performance Evaluation
 Performance metrics were computed for each cross-validation round and averaged:
@@ -61,12 +64,12 @@ Performance metrics were computed for each cross-validation round and averaged:
 
 | Description| Dataset | Filename |
 |:-------------------------:|:-------:|:--------:|
-| Position-Specific Weight Matrix (PSWM) per fold <br> (Heatmap) | Training fold | [`PSWM_round1.pdf`](./vonHeijne/PSWM_round1.pdf) <br> [`PSWM_round2.pdf`](./vonHeijne/PSWM_round2.pdf) <br> [`PSWM_round3.pdf`](./vonHeijne/PSWM_round3.pdf) <br> [`PSWM_round4.pdf`](./vonHeijne/PSWM_round4.pdf) <br> [`PSWM_round5.pdf`](./vonHeijne/PSWM_round5.pdf) |
-| Combined PSWM across all folds <br> (Heatmap) | All folds | [`PSWMs_all_rounds.pdf`](./vonHeijne/PSWMs_all_rounds.pdf) |
-| Precision–Recall Curve per fold | Validation fold | [`PRC_round1.pdf`](./vonHeijne/PRC_round1.pdf) <br> [`PRC_round2.pdf`](./vonHeijne/PRC_round2.pdf) <br> [`PRC_round3.pdf`](./vonHeijne/PRC_round3.pdf) <br> [`PRC_round4.pdf`](./vonHeijne/PRC_round4.pdf) <br> [`PRC_round5.pdf`](./vonHeijne/PRC_round5.pdf) |
-| Combined Precision–Recall Curve across folds | All folds | [`PRC_all_rounds.pdf`](./vonHeijne/PRC_all_rounds.pdf) |
-| Confusion Matrix per fold <br> (TP, TN, FP, FN) | Testing fold | [`CM_round1.pdf`](./vonHeijne/CM_round1.pdf) <br> [`CM_round2.pdf`](./vonHeijne/CM_round2.pdf) <br> [`CM_round3.pdf`](./vonHeijne/CM_round3.pdf) <br> [`CM_round4.pdf`](./vonHeijne/CM_round4.pdf) <br> [`CM_round5.pdf`](./vonHeijne/CM_round5.pdf) |
-| Combined Confusion Matrix across folds | All folds | [`CM_all_rounds.pdf`](./vonHeijne/CM_all_rounds.pdf) |
+| Position-Specific Weight Matrix (PSWM) per fold <br> (Heatmap) | Training fold | [`PSWM_round1.pdf`](./visualization/PSWM_round1.pdf) <br> [`PSWM_round2.pdf`](./visualization/PSWM_round2.pdf) <br> [`PSWM_round3.pdf`](./visualization/PSWM_round3.pdf) <br> [`PSWM_round4.pdf`](./visualization/PSWM_round4.pdf) <br> [`PSWM_round5.pdf`](./visualization/PSWM_round5.pdf) |
+| Combined PSWM across all folds <br> (Heatmap) | All folds | [`PSWMs_all_rounds.pdf`](./visualization/PSWMs_all_rounds.pdf) |
+| Precision–Recall Curve per fold | Validation fold | [`PRC_round1.pdf`](./visualization/PRC_round1.pdf) <br> [`PRC_round2.pdf`](./visualization/PRC_round2.pdf) <br> [`PRC_round3.pdf`](./visualization/PRC_round3.pdf) <br> [`PRC_round4.pdf`](./visualization/PRC_round4.pdf) <br> [`PRC_round5.pdf`](./visualization/PRC_round5.pdf) |
+| Combined Precision–Recall Curve across folds | All folds | [`PRC_all_rounds.pdf`](./visualization/PRC_all_rounds.pdf) |
+| Confusion Matrix per fold <br> (TP, TN, FP, FN) | Testing fold | [`CM_round1.pdf`](./visualization/CM_round1.pdf) <br> [`CM_round2.pdf`](./vonHeijne/CM_round2.pdf) <br> [`CM_round3.pdf`](./visualization/CM_round3.pdf) <br> [`CM_round4.pdf`](./visualization/CM_round4.pdf) <br> [`CM_round5.pdf`](./visualization/CM_round5.pdf) |
+| Combined Confusion Matrix across folds | All folds | [`CM_all_rounds.pdf`](./visualization/CM_all_rounds.pdf) |
 
 ---
 
