@@ -11,6 +11,7 @@ A PSWM was computed from the 15-residue fragments of positive sequences.
 Each position in the fragment is scored according to the log-ratio between observed amino acid frequencies and background frequencies from the SwissProt database.
 
 **Formula:**
+
 \[
 \text{PSWM}_{i,j} = \log_2 \left( \frac{f_{i,j} + 1}{p_i} \right)
 \]
@@ -75,7 +76,7 @@ Performance metrics were computed for each cross-validation round and averaged:
 
 ## Implementation Notes
 
-The full implementation is provided in the Jupyter notebook [`06_vonHeijne.ipynb`](./06_vonHeijne.ipynb), developed using:
+The full implementation is provided in the Jupyter notebook [`06_vonHeijne.ipynb`](./scripts/06_vonHeijne.ipynb), developed using:
 - **Python 3.10+**
 - **NumPy**, **Pandas**
 - **Matplotlib**, **Seaborn**
