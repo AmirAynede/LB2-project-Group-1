@@ -112,7 +112,7 @@ The full description of the procedure can be found in the [README.md](data_analy
   |d.1| Sequences Classification| 
   |e| **Performance Evaluation**| 
   
-The detailed workflow and implementation can be found in the [`von_Heijne/`](vonHeijne/) directory.
+The detailed workflow and implementation can be found in the [`vonHeijne/`](vonHeijne/) directory.
 
 ### Results
   | Metric | Value |
