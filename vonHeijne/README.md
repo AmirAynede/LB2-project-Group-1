@@ -65,18 +65,18 @@ Performance metrics were computed for each cross-validation round and averaged:
 
 | Description| Dataset | Filename |
 |:-------------------------:|:-------:|:--------:|
-| Position-Specific Weight Matrix (PSWM) per fold <br> (Heatmap) | Training fold | [`PSWM_round1.pdf`](./visualization/PSWM_round1.pdf) <br> [`PSWM_round2.pdf`](./visualization/PSWM_round2.pdf) <br> [`PSWM_round3.pdf`](./visualization/PSWM_round3.pdf) <br> [`PSWM_round4.pdf`](./visualization/PSWM_round4.pdf) <br> [`PSWM_round5.pdf`](./visualization/PSWM_round5.pdf) |
-| Combined PSWM across all folds <br> (Heatmap) | All folds | [`PSWMs_all_rounds.pdf`](./visualization/PSWMs_all_rounds.pdf) |
-| Precision–Recall Curve per fold | Validation fold | [`PRC_round1.pdf`](./visualization/PRC_round1.pdf) <br> [`PRC_round2.pdf`](./visualization/PRC_round2.pdf) <br> [`PRC_round3.pdf`](./visualization/PRC_round3.pdf) <br> [`PRC_round4.pdf`](./visualization/PRC_round4.pdf) <br> [`PRC_round5.pdf`](./visualization/PRC_round5.pdf) |
-| Combined Precision–Recall Curve across folds | All folds | [`PRC_all_rounds.pdf`](./visualization/PRC_all_rounds.pdf) |
-| Confusion Matrix per fold <br> (TP, TN, FP, FN) | Testing fold | [`CM_round1.pdf`](./visualization/CM_round1.pdf) <br> [`CM_round2.pdf`](./vonHeijne/CM_round2.pdf) <br> [`CM_round3.pdf`](./visualization/CM_round3.pdf) <br> [`CM_round4.pdf`](./visualization/CM_round4.pdf) <br> [`CM_round5.pdf`](./visualization/CM_round5.pdf) |
-| Combined Confusion Matrix across folds | All folds | [`CM_all_rounds.pdf`](./visualization/CM_all_rounds.pdf) |
+| Position-Specific Weight Matrix (PSWM) per fold <br> (Heatmap) | Training fold | [PSWM_round1.pdf](./visualization/PSWM_round1.pdf) <br> [PSWM_round2.pdf](./visualization/PSWM_round2.pdf) <br> [PSWM_round3.pdf](./visualization/PSWM_round3.pdf) <br> [PSWM_round4.pdf](./visualization/PSWM_round4.pdf) <br> [PSWM_round5.pdf](./visualization/PSWM_round5.pdf) |
+| Combined PSWM across all folds <br> (Heatmap) | All folds | [PSWMs_all_rounds.pdf](./visualization/PSWMs_all_rounds.pdf) |
+| Precision–Recall Curve per fold | Validation fold | [PRC_round1.pdf](./visualization/PRC_round1.pdf) <br> [PRC_round2.pdf](./visualization/PRC_round2.pdf) <br> [PRC_round3.pdf](./visualization/PRC_round3.pdf) <br> [PRC_round4.pdf](./visualization/PRC_round4.pdf) <br> [PRC_round5.pdf](./visualization/PRC_round5.pdf) |
+| Combined Precision–Recall Curve across folds | All folds | [PRC_all_rounds.pdf](./visualization/PRC_all_rounds.pdf) |
+| Confusion Matrix per fold <br> (TP, TN, FP, FN) | Testing fold | [CM_round1.pdf](./visualization/CM_round1.pdf) <br> [CM_round2.pdf](./vonHeijne/CM_round2.pdf) <br> [CM_round3.pdf](./visualization/CM_round3.pdf) <br> [CM_round4.pdf](./visualization/CM_round4.pdf) <br> [CM_round5.pdf](./visualization/CM_round5.pdf) |
+| Combined Confusion Matrix across folds | All folds | [CM_all_rounds.pdf](./visualization/CM_all_rounds.pdf) |
 
 ---
 
 ## Implementation Notes
 
-The full implementation is provided in the Jupyter notebook [`06_vonHeijne.ipynb`](./scripts/06_vonHeijne.ipynb), developed using:
+The full implementation is provided in the Jupyter notebook [06_vonHeijne.ipynb](./scripts/06_vonHeijne.ipynb), developed using:
 - **Python 3.10+**
 - **NumPy**, **Pandas**
 - **Matplotlib**, **Seaborn**
