@@ -17,8 +17,8 @@ $$
 $$
 
 where:  
-- \( f_{i,j} \) = frequency of amino acid \( i \) at position \( j \) in the training fragments  
-- \( p_i \) = background frequency of amino acid \( i \) in SwissProt
+- $f_{i,j}$ = frequency of amino acid $i$ at position $j$ in the training fragments  
+- $p_i$ = background frequency of amino acid $i$ in SwissProt
 
 **Visualization:** PSWM heatmaps were generated to visualize the positional amino acid preferences. Annotated log2 enrichment scores highlighted over- and under-represented residues, confirming hydrophobic enrichment and the canonical **A–X–A motif**.
 
