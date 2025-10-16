@@ -1,5 +1,5 @@
 ## von Heijne Method for Signal Peptide Detection
-**Objective:** To classify protein sequences as *secretory (SP+)* or *non-secretory (SP–)* by modeling the conserved amino acid composition and positional patterns typical of signal peptides.
+**Objective:** To classify protein sequences as *secretory* or *non-secretory* by modeling the conserved amino acid composition and positional patterns typical of signal peptides.
 
 ### a. Data Organization
 The dataset was derived from the **training set** used in the main pipeline, containing 15-residue fragments around SP cleavage sites for positive sequences and equivalent regions for negatives.  
@@ -69,7 +69,7 @@ Performance metrics were computed for each cross-validation round and averaged:
 | Combined PSWM across all folds <br> (Heatmap) | All folds | [PSWMs_all_rounds.pdf](./visualization/PSWMs_all_rounds.pdf) |
 | Precision–Recall Curve per fold | Validation fold | [PRC_round1.pdf](./visualization/PRC_round1.pdf) <br> [PRC_round2.pdf](./visualization/PRC_round2.pdf) <br> [PRC_round3.pdf](./visualization/PRC_round3.pdf) <br> [PRC_round4.pdf](./visualization/PRC_round4.pdf) <br> [PRC_round5.pdf](./visualization/PRC_round5.pdf) |
 | Combined Precision–Recall Curve across folds | All folds | [PRC_all_rounds.pdf](./visualization/PRC_all_rounds.pdf) |
-| Confusion Matrix per fold <br> (TP, TN, FP, FN) | Testing fold | [CM_round1.pdf](./visualization/CM_round1.pdf) <br> [CM_round2.pdf](./vonHeijne/CM_round2.pdf) <br> [CM_round3.pdf](./visualization/CM_round3.pdf) <br> [CM_round4.pdf](./visualization/CM_round4.pdf) <br> [CM_round5.pdf](./visualization/CM_round5.pdf) |
+| Confusion Matrix per fold <br> (TP, TN, FP, FN) | Testing fold | [CM_round1.pdf](./visualization/CM_round1.pdf) <br> [CM_round2.pdf](./visualization/CM_round2.pdf) <br> [CM_round3.pdf](./visualization/CM_round3.pdf) <br> [CM_round4.pdf](./visualization/CM_round4.pdf) <br> [CM_round5.pdf](./visualization/CM_round5.pdf) |
 | Combined Confusion Matrix across folds | All folds | [CM_all_rounds.pdf](./visualization/CM_all_rounds.pdf) |
 
 ---
