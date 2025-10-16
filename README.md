@@ -71,6 +71,8 @@ The ID lists were randomized and split. The output files were used to filter the
 
 The data visualization step provides insights into the characteristics of the positive and negative protein datasets used in this study. The plots were generated in Python using **matplotlib** and **seaborn**.
 
+The full description of the procedure can be found in the [README.md](data_analysis/README.md) of the data_analysis folder.
+
 ### Workflow
   | Section | Title |
   | :---:  | :---:  |
@@ -95,7 +97,7 @@ The data visualization step provides insights into the characteristics of the po
 **Note:** All plots and analyses are reproducible using the uploaded [Data_Visualization.ipynb](data_analysis/scripts/04_Data_Analysis.ipynb) notebook. 
 
 ## 4. The vonHeijne method for SP detection 
-**Objective:** classify sequences with respect to the presence of a SP.
+**Objective:** Classify eukaryotic protein sequences with respect to the presence or absence of a signal peptide (SP) using a position-specific weight matrix (PSWM)-based approach inspired by the *von Heijne* method.
 
 ### Workflow
   | Section | Title |
@@ -109,6 +111,8 @@ The data visualization step provides insights into the characteristics of the po
   |d| **Testing**|
   |d.1| Sequences Classification| 
   |e| **Performance Evaluation**| 
+  
+The detailed workflow and implementation can be found in the [`von_Heijne/`](von_Heijne/) directory.
 
 ### Results
   | Metric | Value |
@@ -119,6 +123,8 @@ The data visualization step provides insights into the characteristics of the po
   |F1 Score| 0.7012 ± 0.0226| 
   |MCC| 0.6664 ± 0.0258|
   |Threshold| 8.8089 ± 0.5967| 
+
+### 
   
 ## References 
 1. Owji, Hajar & Nezafat, Navid & Negahdaripour, Manica & HajiEbrahimi, Ali & Younes, Ghasemi. (2018). A Comprehensive Review of Signal Peptides: Structure, Roles, and Applications. European Journal of Cell Biology. 97. 10.1016/j.ejcb.2018.06.003.
