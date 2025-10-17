@@ -123,6 +123,51 @@ The detailed workflow and implementation can be found in the [vonHeijne/](vonHei
   |**F1 Score**| 0.7012 ± 0.0226| 
   |**MCC**| 0.6664 ± 0.0258|
   |**Threshold**| 8.8089 ± 0.5967| 
+
+  ## 5. SVM classifier for SP detection
+**Objective:** Classify eukaryotic protein sequences with respect to the presence or absence of a signal peptide (SP) building a Support Vector Machine (SVM) based on features extracted from the training dataset sequences.
+
+### Workflow
+  | Section | Title |
+  | :---:  | :---:  |
+  |a| **Data Organization** |
+  |b| **Features Definition** |
+  |c| **Training and Validation** |
+  |c.1| Feature Extraction and Scaling |
+  |c.2| Grid Search Over Hyperparameters | 
+  |c.3| Features Selection (Random Forest) | 
+  |d| **Model Testing**|
+  |d.1| Over Selected Features| 
+  |d.2| Over All Features|
+
+### Results
+The best models were selected by a grid search over the hyperparameters utilizing F1 score and MCC as performance metrics.
+
+| Round | 1 | 2 | 3 | 4 | 5 |
+  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  |
+  |**Selected Features** <br> (Over the Best 29 Features)| MCC: 25 <br> F1: 25 | MCC: 25 <br> F1: 25 | MCC: 29 <br> F1: 29 | MCC: 24 <br> F1: 24 | MCC: 28 <br> F1: 28 | 
+
+
+
+  | Round | Kernel (Selected) | Kernel (All) | C (Selected) |C (All) | Gamma (Selected) | Gamma (All)| 
+  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | 
+  |**1**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 0.1 <br> F1: 1 | MCC: 1 <br> F1: 1 | MCC: "scale" <br> F1: 0.01 | MCC: 0.01 <br> F1: 0.01 |
+  |**2**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 10 <br> F1: 10 | MCC: 10 <br> F1: 10 | MCC: "scale" <br> F1: "scale" | MCC: "scale" <br> F1: "scale" |
+  |**3**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 10 <br> F1: 10 | MCC: 10 <br> F1: 10 | MCC: 0.01 <br> F1: 0.01 | MCC: 0.01 <br> F1: 0.01 |
+  |**4**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 1 <br> F1: 1 | MCC: 10 <br> F1: 10 | MCC: "scale" <br> F1: "scale" | MCC: 0.01 <br> F1: 0.01 | 
+  |**5**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 1 <br> F1: 1 | MCC: 10 <br> F1: 10 | MCC: "scale" <br> F1: "scale" | MCC: 0.01 <br> F1: 0.01 |
+
+
+  | Round | MCC (Selected) | MCC (All) | F1 (Selected) | F1 (All)| 
+  | :---:  | :---:  | :---:  | :---:  | :---:  | 
+  |**1**| 0.799| 0.853 | 0.840 | 0.867 |
+  |**2**| 0.774 | 0.781 | 0.798 | 0.805 |
+  |**3**| 0.822 | 0.839 | 0.841 | 0.857 |
+  |**4**| 0.818 | 0.859 | 0.838 | 0.874 | 
+  |**5**| 0.791 | 0.802 | 0.813 | 0.824 |
+  |**Average**| 0.801 | 0.823 | 0.826 | 0.845 |
+
+
   
 ## References 
 1. Owji, Hajar & Nezafat, Navid & Negahdaripour, Manica & HajiEbrahimi, Ali & Younes, Ghasemi. (2018). A Comprehensive Review of Signal Peptides: Structure, Roles, and Applications. European Journal of Cell Biology. 97. 10.1016/j.ejcb.2018.06.003.
