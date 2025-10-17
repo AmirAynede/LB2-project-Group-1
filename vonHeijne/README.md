@@ -34,7 +34,7 @@ Sequences from the test fold were scored using the trained PSWM and classified a
 
 Confusion matrices were used to display true positives, true negatives, false positives, and false negatives. Colored cells enhanced visual distinction between correct and incorrect predictions.
 
-![CM_round1]((https://github.com/user-attachments/assets/42cc18b8-4a4e-496a-afa4-0c6d6e675cdf))
+![CM_round1](https://github.com/user-attachments/assets/42cc18b8-4a4e-496a-afa4-0c6d6e675cdf)
 
 ### e. Performance Evaluation
 Performance metrics were computed for each cross-validation round and averaged:
