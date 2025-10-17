@@ -16,7 +16,7 @@ For this task, the Jupyter notebook [05_training_df.ipynb](./scripts/05_training
 A PSWM was computed from the 15-residue fragments of positive sequences.  
 Each position in the fragment is scored according to the log-ratio between observed amino acid frequencies and background frequencies from the SwissProt database.
 
-![PSWM_round1.png](<img width="9370" height="5988" alt="PSWM_round1" src="https://github.com/user-attachments/assets/749b1948-f408-4f5a-ab2b-bba3f1bccba1" />)
+![PSWM_round1](https://github.com/user-attachments/assets/749b1948-f408-4f5a-ab2b-bba3f1bccba1)
 
 **Visualization:** PSWM heatmaps were generated to visualize the positional amino acid preferences. Annotated log2 enrichment scores highlighted over- and under-represented residues, confirming hydrophobic enrichment and the canonical **A–X–A motif**.
 
