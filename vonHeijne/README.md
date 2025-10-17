@@ -2,8 +2,13 @@
 **Objective:** To classify protein sequences as *secretory* or *non-secretory* by modeling the conserved amino acid composition and positional patterns typical of signal peptides.
 
 ### a. Data Organization
-The dataset was derived from the **training set** used in the main pipeline, containing 15-residue fragments around SP cleavage sites for positive sequences and equivalent regions for negatives.  
-A 5-fold cross-validation scheme was applied.
+The necessary data to be retrieved were: 
+- UniProt ID
+- Class (1 for positive and 0 for negative)
+- Fold label (1-5)
+- Up to 90 amino acid fragment
+- 15 amino acid fragment: starting from the cleavage site 13 amino acids towards the N-terminal and 2 amino acids towards the C-terminal
+For this the Jupyter notebook [05_training_df.ipynb](./scripts/05_training_df.ipynb).
 
 ### b. Training
 #### b.1 Position-Specific Weight Matrix (PSWM) Computation
@@ -51,7 +56,6 @@ Performance metrics were computed for each cross-validation round and averaged:
 | **Optimal Threshold** | 8.8089 ± 0.5967 |
 
 ## Interpretation of Results
-- The *von Heijne* method reliably classifies signal peptides.  
 - **MCC** is the most informative metric, reflecting consistent performance under class imbalance.  
 - **Accuracy** is inflated due to the skewed dataset and should not be used alone.  
 - **PSWM heatmaps** reveal biologically meaningful patterns:  
