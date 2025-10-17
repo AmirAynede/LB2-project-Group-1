@@ -33,7 +33,8 @@ The **F1-maximizing threshold** was selected for each round.
 Sequences from the test fold were scored using the trained PSWM and classified according to the optimal threshold from the corresponding validation fold.
 
 Confusion matrices were used to display true positives, true negatives, false positives, and false negatives. Colored cells enhanced visual distinction between correct and incorrect predictions.
-![PSWM_round1](https://github.com/user-attachments/assets/749b1948-f408-4f5a-ab2b-bba3f1bccba1)
+
+![CM_round1]((https://github.com/user-attachments/assets/42cc18b8-4a4e-496a-afa4-0c6d6e675cdf))
 
 ### e. Performance Evaluation
 Performance metrics were computed for each cross-validation round and averaged:
