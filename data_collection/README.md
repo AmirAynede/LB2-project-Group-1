@@ -1,4 +1,4 @@
-## Data Collection 📥
+## Data Collection 
 **Objective:** retrieve positive and negative datasets of eukaryotic proteins from UniProtKB.
 
 ### a. Selection criteria
@@ -75,4 +75,5 @@ Where:
 - --pos_fasta and --neg_fasta: output FASTA files.
 - The UniProt API queries are embedded in the script (pos_url, neg_url), but can be replaced with custom ones for reproducibility.
   
+
 
