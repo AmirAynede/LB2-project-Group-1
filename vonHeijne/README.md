@@ -13,12 +13,9 @@ For this task, the Jupyter notebook [05_training_df.ipynb](./scripts/05_training
 
 ### b. Training
 #### b.1 Position-Specific Weight Matrix (PSWM) Computation
-A PSWM was computed from the 15-residue fragments of positive sequences.  
-Each position in the fragment is scored according to the log-ratio between observed amino acid frequencies and background frequencies from the SwissProt database.
+A PSWM was computed from the 15-residue fragments of positive sequences using background frequencies from the SwissProt database. Were generated to visualize the PSWMs matrices. Each PSWM is a 20x15 dimentional matrix addressing residue composition for each position in the fragment of interest.
 
 ![PSWM_round1](https://github.com/user-attachments/assets/749b1948-f408-4f5a-ab2b-bba3f1bccba1)
-
-**Visualization:** PSWM heatmaps were generated to visualize the positional amino acid preferences. Annotated log2 enrichment scores highlighted over- and under-represented residues, confirming hydrophobic enrichment and the canonical **A–X–A motif**.
 
 ### c. Validation
 #### c.1 Sequence Scoring
@@ -34,7 +31,9 @@ The **F1-maximizing threshold** was selected for each round.
 ### d. Testing
 #### d.1 Sequences Classification
 Sequences from the test fold were scored using the trained PSWM and classified according to the optimal threshold from the corresponding validation fold.
-**Visualization:** Confusion matrices were used to display true positives, true negatives, false positives, and false negatives. Colored cells enhanced visual distinction between correct and incorrect predictions.
+
+Confusion matrices were used to display true positives, true negatives, false positives, and false negatives. Colored cells enhanced visual distinction between correct and incorrect predictions.
+![PSWM_round1](https://github.com/user-attachments/assets/749b1948-f408-4f5a-ab2b-bba3f1bccba1)
 
 ### e. Performance Evaluation
 Performance metrics were computed for each cross-validation round and averaged:
