@@ -23,10 +23,9 @@ Each 90-residue sequence fragment is scanned using a sliding 15-residue window.
 The **maximum PSWM score** across the window is retained as the sequence score.
 
 #### c.2 Optimal Threshold Selection
-Precision–Recall curves were computed using validation data.  
-The **F1-maximizing threshold** was selected for each round.
+Precision–Recall curves were used to show model performance per fold and combined across folds. The **F1-maximizing threshold** was selected for each round. Optimal thresholds were highlighted to indicate the best trade-off between precision and recall.
 
-**Visualization:** Precision–Recall curves were used to show model performance per fold and combined across folds. Optimal thresholds were highlighted to indicate the best trade-off between precision and recall.
+![PR_round1](https://github.com/user-attachments/assets/42cc18b8-4a4e-496a-afa4-0c6d6e675cdf](https://github.com/user-attachments/assets/40f93778-b847-482a-8600-3ee64c538590)
 
 ### d. Testing
 #### d.1 Sequences Classification
