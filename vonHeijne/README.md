@@ -8,7 +8,8 @@ The necessary data to be retrieved were:
 - Fold label (1-5)
 - Up to 90 amino acid fragment
 - 15 amino acid fragment: starting from the cleavage site 13 amino acids towards the N-terminal and 2 amino acids towards the C-terminal
-For this the Jupyter notebook [05_training_df.ipynb](./scripts/05_training_df.ipynb).
+
+For this task, the Jupyter notebook [05_training_df.ipynb](./scripts/05_training_df.ipynb) was used.
 
 ### b. Training
 #### b.1 Position-Specific Weight Matrix (PSWM) Computation
