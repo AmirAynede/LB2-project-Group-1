@@ -124,7 +124,7 @@ The detailed workflow and implementation can be found in the [vonHeijne/](vonHei
   |**MCC**| 0.6664 ± 0.0258|
   |**Threshold**| 8.8089 ± 0.5967| 
 
-  ## 5. SVM classifier for SP detection
+## 5. SVM classifier for SP detection
 **Objective:** Classify eukaryotic protein sequences with respect to the presence or absence of a signal peptide (SP) building a Support Vector Machine (SVM) based on features extracted from the training dataset sequences.
 
 ### Workflow
@@ -141,31 +141,53 @@ The detailed workflow and implementation can be found in the [vonHeijne/](vonHei
   |d.2| Over All Features|
 
 ### Results
-The best models were selected by a grid search over the hyperparameters utilizing F1 score and MCC as performance metrics.
+The best models were selected by a grid search over the hyperparameters utilizing MCC as performance metric. <br>
+Overall, the models built utilizing all features performed best. <br>
 
-| Round | 1 | 2 | 3 | 4 | 5 |
-  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  |
-  |**Selected Features** <br> (Over the Best 29 Features)| MCC: 25 <br> F1: 25 | MCC: 25 <br> F1: 25 | MCC: 29 <br> F1: 29 | MCC: 24 <br> F1: 24 | MCC: 28 <br> F1: 28 | 
+#### Models trained over all features:
 
+**Selected Hyperparameters and best validation MCC:** 
 
+  | Round | Kernel | C | Gamma | MCC | 
+  | :---:  | :---:  | :---:  | :---:  |:---:  |
+  |**1**| 'rbf' | 1 | 0.01 | 0.823 |
+  |**2**| 'rbf' | 10 | 'scale' | 0.877 |
+  |**3**| 'rbf' | 10 | 0.01 | 0.822 |
+  |**4**| 'rbf' | 10 | 0.01 | 0.844 | 
+  |**5**|'rbf' | 10 | 0.01 | 0.856 |
 
-  | Round | Kernel (Selected) | Kernel (All) | C (Selected) |C (All) | Gamma (Selected) | Gamma (All)| 
-  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | 
-  |**1**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 0.1 <br> F1: 1 | MCC: 1 <br> F1: 1 | MCC: "scale" <br> F1: 0.01 | MCC: 0.01 <br> F1: 0.01 |
-  |**2**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 10 <br> F1: 10 | MCC: 10 <br> F1: 10 | MCC: "scale" <br> F1: "scale" | MCC: "scale" <br> F1: "scale" |
-  |**3**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 10 <br> F1: 10 | MCC: 10 <br> F1: 10 | MCC: 0.01 <br> F1: 0.01 | MCC: 0.01 <br> F1: 0.01 |
-  |**4**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 1 <br> F1: 1 | MCC: 10 <br> F1: 10 | MCC: "scale" <br> F1: "scale" | MCC: 0.01 <br> F1: 0.01 | 
-  |**5**| MCC: "rbf" <br> F1: "rbf" | MCC: "rbf" <br> F1: "rbf" | MCC: 1 <br> F1: 1 | MCC: 10 <br> F1: 10 | MCC: "scale" <br> F1: "scale" | MCC: 0.01 <br> F1: 0.01 |
+**Performance Evaluation Metrics over Testing data:**
 
+| Round | MCC | Precision | Recall | Accuracy | F1 score |
+  | :---:  | :---:  | :---:  | :---:  |:---:  |:---:  |
+  |**1**| 0.853 | 0.926 | 0.817 | 0.976 | 0.867 |
+  |**2**| 0.781 | 0.821 | 0.789 | 0.958 | 0.805 |
+  |**3**| 0.839 | 0.841 | 0.874 | 0.968 | 0.857 |
+  |**4**| 0.856 | 0.852 | 0.897 | 0.972 | 0.874 |
+  |**5**| 0.802 | 0.819 | 0.826 | 0.961 | 0.824 |
 
-  | Round | MCC (Selected) | MCC (All) | F1 (Selected) | F1 (All)| 
-  | :---:  | :---:  | :---:  | :---:  | :---:  | 
-  |**1**| 0.799| 0.853 | 0.840 | 0.867 |
-  |**2**| 0.774 | 0.781 | 0.798 | 0.805 |
-  |**3**| 0.822 | 0.839 | 0.841 | 0.857 |
-  |**4**| 0.818 | 0.859 | 0.838 | 0.874 | 
-  |**5**| 0.791 | 0.802 | 0.813 | 0.824 |
-  |**Average**| 0.801 | 0.823 | 0.826 | 0.845 |
+  #### Models trained over all features:
+
+**Selected Hyperparameters and best validation MCC:** 
+
+  | Round | Kernel | C | Gamma | MCC | 
+  | :---:  | :---:  | :---:  | :---:  |:---:  |
+  |**1**| 'rbf' | 0.1 | 'scale' | 0.802 |
+  |**2**| 'rbf' | 10 | 'scale' | 0.849 |
+  |**3**| 'rbf' | 10 | 0.01 | 0.807 |
+  |**4**| 'rbf' | 1 | 'scale' | 0.807 | 
+  |**5**|'rbf' | 1 | 'scale' | 0.857 |
+
+**Performance Evaluation Metrics over Testing data:**
+
+| Round | MCC | Precision | Recall | Accuracy | F1 score |
+  | :---:  | :---:  | :---:  | :---:  |:---:  |:---:  |
+  |**1**| 0.799 | 0.914 | 0.731 | 0.963 | 0.813 |
+  |**2**| 0.774 | 0.819 | 0.777 | 0.957 | 0.798 |
+  |**3**| 0.822 | 0.849 | 0.834 | 0.967 | 0.841 |
+  |**4**| 0.818 | 0.830 | 0.845 | 0.964 | 0.838 |
+  |**5**| 0.790 | 0.832 | 0.794 | 0.960 | 0.813 |
+
 
 
   
