@@ -144,7 +144,7 @@ The detailed workflow and implementation can be found in the [vonHeijne/](vonHei
 The best models were selected by a grid search over the hyperparameters utilizing MCC as performance metric. <br>
 Overall, the models built utilizing all features performed best. <br>
 
-#### Models trained over all features:
+#### Models trained over ALL FEATURES:
 
 **Selected Hyperparameters and best validation MCC:** 
 
@@ -166,7 +166,7 @@ Overall, the models built utilizing all features performed best. <br>
   |**4**| 0.856 | 0.852 | 0.897 | 0.972 | 0.874 |
   |**5**| 0.802 | 0.819 | 0.826 | 0.961 | 0.824 |
 
-  #### Models trained over all features:
+  #### Models trained over SELECTED FEATURES:
 
 **Selected Hyperparameters and best validation MCC:** 
 
