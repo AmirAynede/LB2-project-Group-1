@@ -28,6 +28,12 @@ d1. Random Forest feature importances and MCC curves are used to identify the mo
 
 d2. The optimal subset is chosen and a secondary SVM is retrained and evaluated.
 
+The top features contributing to SVM model performance, as identified by Random Forest Gini importance in round 1, are visualized below:
+
+![Top Features (Round 1)](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/05_SVMs/files/Top_Features_round1.jpg?raw=true)
+
+This bar plot ranks the twenty most important features contributing to the SVM model, as determined by Random Forest Gini importance in round 1.
+
 ### e. Evaluation & Metrics
    
 e1. Test performance is aggregated over all folds.
