@@ -71,6 +71,19 @@ Performance Evaluation Metrics over Testing data:
 | **5**         | 0.791      | 0.832       | 0.794      | 0.960      | 0.813      |
 | **Mean ± Std**| 0.801 ± 0.018 | 0.849 ± 0.034 | 0.796 ± 0.041 | 0.962 ± 0.003 | 0.821 ± 0.016 |
 
+The effect of including more top features on model performance is visualized below. This plot was used to select the optimal number of features for the SVM:
+
+![MCC vs Validation Size (Round 1)](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/05_SVMs/files/MCC_vs_Val_round1.jpg?raw=true)
+
+This curve illustrates how the SVM’s validation MCC changes as more top-ranked features are included, informing optimal feature subset selection.
+
+
+To summarize prediction results, the combined confusion matrix across all test sets is shown. It reports the aggregate true/false positive and negative counts, highlighting robust model performance:
+
+![Combined Confusion Matrix (5 Rounds)](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/05_SVMs/files/CM_all_combined.jpg?raw=true)
+
+This matrix summarizes the overall prediction results, showing true positives, true negatives, false positives, and false negatives for the test sets across all cross-validation rounds.
+
 
 The full pipeline ensures that model selection is unbiased and performance is measured on unseen data. 
 Random Forest feature importance is used as a guide but feature subset size is selected using validation performance curves. 
