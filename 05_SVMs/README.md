@@ -1,6 +1,6 @@
 # SVM-Based Protein Classification
 
-This repository contains the code and results for training and evaluating Support Vector Machine (SVM) classifiers to distinguish protein classes using a set of physicochemical and sequence-derived features. 
+This folder contains the code and results for training and evaluating Support Vector Machine (SVM) classifiers to distinguish protein classes using a set of physicochemical and sequence-derived features. 
 The pipeline implements robust feature extraction, model selection and systematic evaluation using cross-validation. The main goal of this repository is to classify protein sequences and understand which features most contribute to prediction accuracy. 
 The analysis compares SVM models trained on all features against those trained on a subset selected via feature importance strategies.
 
