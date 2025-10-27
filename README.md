@@ -83,18 +83,14 @@ The full description of the procedure can be found in the [README.md](data_analy
 ### Results
 | Description and Plot Type | Dataset | Filename | 
 |:-----------:|:--------:|:----------:|
-| Kingdom distribution <br> (Pie & Bar) | All | [t_kingdom.pdf](data_analysis/visualization/t_kingdom.pdf) <br>[pos_t_kingdom.pdf](data_analysis/visualization/pos_t_kingdom.pdf) <br> [neg_t_kingdom.pdf](data_analysis/visualization/neg_t_kingdom.pdf) <br> [b_kingdom.pdf](data_analysis/visualization/b_kingdom.pdf) <br> [pos_b_kingdom.pdf](data_analysis/visualization/pos_b_kingdom.pdf) <br> [neg_b_kingdom.pdf](data_analysis/visualization/neg_b_kingdom.pdf) | 
-| Species distribution <br> (Pie & Bar) | All | [t_species.pdf](data_analysis/visualization/t_species.pdf) <br> [t_species_bar.pdf](data_analysis/visualization/t_species_bar.pdf) <br> [pos_t_species.pdf](data_analysis/visualization/pos_t_species.pdf) <br> [pos_t_species_bar.pdf](data_analysis/visualization/pos_t_species_bar.pdf) <br>  [neg_t_species.pdf](data_analysis/visualization/neg_t_species.pdf) <br> [neg_t_species_bar.pdf](data_analysis/visualization/neg_t_species_bar.pdf) <br>  [b_species.pdf](data_analysis/visualization/b_species.pdf) <br> [b_species_bar.pdf](data_analysis/visualization/b_species_bar.pdf) <br> [pos_b_species.pdf](data_analysis/visualization/pos_b_species.pdf) <br> [pos_b_species_bar.pdf](data_analysis/visualization/pos_b_species_bar.pdf) <br>  [neg_b_species.pdf](data_analysis/visualization/neg_b_species.pdf) <br> [neg_b_species_bar.pdf](data_analysis/visualization/neg_b_species_bar.pdf)| 
-| Sequence length distribution <br> (KDE Plot) | All | [Seq_length_posneg.pdf](data_analysis/visualization/Seq_length_posneg.pdf) <br> [Seq_length_TB.pdf](data_analysis/visualization/Seq_length_TB.pdf) <br> [Seq_length_pos.pdf](data_analysis/visualization/Seq_length_pos.pdf)  <br> [Seq_length_neg.pdf](data_analysis/visualization/Seq_length_neg.pdf) | 
-| Sequence length distribution <br> (Boxplot) | All | [Seq_length_posneg_box.pdf](data_analysis/visualization/Seq_length_posneg_box.pdf)  <br> [Seq_length_TB_box.pdf](data_analysis/visualization/Seq_length_TB_box.pdf)  <br> [Seq_length_pos_box.pdf](data_analysis/visualization/Seq_length_pos_box.pdf) <br> [Seq_length_neg_box.pdf](data_analysis/visualization/Seq_length_neg_box.pdf) | 
-| Sequence length distribution <br> (Histogram) | All | [Seq_length_posneg_hist.pdf](data_analysis/visualization/Seq_length_posneg_hist.pdf) <br> [Seq_length_TB_hist.pdf](data_analysis/visualization/Seq_length_TB_hist.pdf) <br> [Seq_length_pos_hist.pdf](data_analysis/visualization/Seq_length_pos_hist.pdf) <br> [Seq_length_neg_hist.pdf](data_analysis/visualization/Seq_length_neg_hist.pdf)  | 
-| Signal Peptide length distribution <br> (KDE plot) | Positive | [SP_length_dist.pdf](data_analysis/visualization/SP_length_dist.pdf) |
-| Signal Peptide length distribution <br> (Boxplot)  | Positive | [SP_length_box.pdf](data_analysis/visualization/SP_length_box.pdf) | Signal peptide length distribution |
-| Signal Peptide length distribution <br> (Histogram) | Positive | [SP_length_hist.pdf](data_analysis/visualization/SP_length_hist.pdf) | SP length probability distribution |
-| Residue composition <br> (Bar Plot) | All compared to SwissProt | [residue_composition.pdf](data_analysis/visualization/residue_composition.pdf) | 
-| Signal Peptide cleavage site logos <br> (Sequence Logo) | Positive | [t_logo.png](data_analysis/visualization/t_logo.png) <br> [b_logo.png](data_analysis/visualization/b_logo.png) | 
+| Kingdom distribution <br> (Pie & Bar) | All | [kingdom_dist.pdf](01_data_analysis/visualization/kingdom_dist.pdf) | 
+| Species distribution <br> (Pie & Bar) | All | [species_dist.pdf](01_data_analysis/visualization/species_dist.pdf) | 
+| Sequence length distribution <br> (KDE Plot, Boxplot, Histogram) | All | [seq_length.pdf](01_data_analysis/visualization/seq_length.pdf) | 
+| Signal Peptide length distribution <br> ((KDE Plot, Boxplot, Histogram) | Positive | [SP_length.pdf](01_data_analysis/visualization/SP_length.pdf) | 
+| Residue composition <br> (Bar Plot) | All compared to SwissProt | [residue_composition.pdf](01_data_analysis/visualization/residue_composition.pdf) | 
+| Signal Peptide cleavage site logos <br> (Sequence Logo) | Positive | [logo.pdf](01_data_analysis/visualization/logo.pdf)| 
 
-**Note:** All plots and analyses are reproducible using the uploaded [Data_Visualization.ipynb](data_analysis/scripts/04_Data_Analysis.ipynb) notebook. 
+**Note:** All plots and analyses are reproducible using the uploaded [Data_Visualization.ipynb](01_data_analysis/scripts/04_Data_Analysis.ipynb) notebook. 
 
 ## 4. The vonHeijne method for SP detection 
 **Objective:** Classify eukaryotic protein sequences with respect to the presence or absence of a signal peptide (SP) using a position-specific weight matrix (PSWM)-based approach inspired by the *von Heijne* method.
