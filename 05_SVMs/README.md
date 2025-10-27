@@ -2,16 +2,12 @@
 
 **Objective:** training and evaluating Support Vector Machine (SVM) classifiers to distinguish protein classes using a set of physicochemical and sequence-derived features. 
 
-The pipeline implements robust feature extraction, model selection and systematic evaluation using cross-validation. The main goal of this repository is to classify protein sequences and understand which features most contribute to prediction accuracy. 
-The analysis compares SVM models trained on all features against those trained on a subset selected via feature importance strategies.
-
-
 
 ### a. Data Preparation & Feature Extraction
 
-a1. Protein sequence data is parsed and transformed into fixed length vectors using custom feature extraction functions.
+Protein sequence data is parsed and transformed into fixed length vectors using custom feature extraction functions.
 
-a2. Extracted features encode amino acid composition, hydrophobicity, secondary structure propensity (alpha-helix, beta-sheet), charge and transmembrane helix propensity.
+Extracted features encode amino acid composition, hydrophobicity, secondary structure propensity (alpha-helix, beta-sheet), charge and transmembrane helix propensity.
 
 ### b. Feature Scaling
 
@@ -19,15 +15,15 @@ All features are standardized using StandardScaler for optimal model convergence
 
 ### c. SVM Model Training & Cross-validation
    
-c1. Stratified cross-validation (5 folds) is used to split the data for robust assessment.
+Stratified cross-validation (5 folds) is used to split the data for robust assessment.
 
-c2. Hyperparameters (C, gamma, and kernel) are optimized for each fold using grid search, maximizing the Matthews Correlation Coefficient (MCC) on the validation set.
+Hyperparameters (C, gamma, and kernel) are optimized for each fold using grid search, maximizing the Matthews Correlation Coefficient (MCC) on the validation set.
 
 ### d. Feature Selection (For Selected Features Model)
    
-d1. Random Forest feature importances and MCC curves are used to identify the most informative features for SVM classification.
+Random Forest feature importances and MCC curves are used to identify the most informative features for SVM classification.
 
-d2. The optimal subset is chosen and a secondary SVM is retrained and evaluated.
+The optimal subset is chosen and a secondary SVM is retrained and evaluated.
 
 The top features contributing to SVM model performance, as identified by Random Forest Gini importance in round 1, are visualized below:
 
@@ -35,16 +31,13 @@ The top features contributing to SVM model performance, as identified by Random 
 
 This bar plot ranks the twenty most important features contributing to the SVM model, as determined by Random Forest Gini importance in round 1.
 
-### e. Evaluation & Metrics
+### e. Performance Evaluation
    
-e1. Test performance is aggregated over all folds.
+Test performance is aggregated over all folds.
 
-e2. Metrics reported: MCC, Precision, Recall, Accuracy, and F1 score.
+Metrics reported: MCC, Precision, Recall, Accuracy, and F1 score.
 
-
-## Results
-
-### Models trained over ALL FEATURES
+#### Models trained over ALL FEATURES
 
 Performance Evaluation Metrics over Testing data:
 
@@ -57,8 +50,7 @@ Performance Evaluation Metrics over Testing data:
 | **5**      | 0.802         | 0.819          | 0.826         | 0.961         | 0.824         |
 | **Mean ± Std** | 0.826 ± 0.030 | 0.851 ± 0.038  | 0.841 ± 0.039 | 0.967 ± 0.007 | 0.845 ± 0.026 |
 
-
-### Models trained over SELECTED FEATURES
+#### Models trained over SELECTED FEATURES
 
 Performance Evaluation Metrics over Testing data:
 
