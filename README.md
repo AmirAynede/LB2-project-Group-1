@@ -157,14 +157,15 @@ Overall, the models built utilizing all features performed best. <br>
   |**5**|'rbf' | 10 | 0.01 | 0.856 |
 
 **Performance Evaluation Metrics over Testing data:**
+| Metrics    | Value    |
+| :--------- | :-------------- |
+| **MCC**        | 0.826 ± 0.030   |
+| **Precision**  | 0.851 ± 0.038   |
+| **Recall**     | 0.841 ± 0.039   |
+| **Accuracy**   | 0.967 ± 0.007   |
+| **F1 score**   | 0.845 ± 0.026   |
 
-| Round | MCC | Precision | Recall | Accuracy | F1 score |
-  | :---:  | :---:  | :---:  | :---:  |:---:  |:---:  |
-  |**1**| 0.853 | 0.923 | 0.817 | 0.976 | 0.867 |
-  |**2**| 0.781 | 0.821 | 0.789 | 0.958 | 0.805 |
-  |**3**| 0.839 | 0.841 | 0.874 | 0.968 | 0.857 |
-  |**4**| 0.856 | 0.852 | 0.897 | 0.972 | 0.874 |
-  |**5**| 0.802 | 0.819 | 0.826 | 0.961 | 0.824 |
+
 
   #### Models trained over SELECTED FEATURES:
 
@@ -180,13 +181,14 @@ Overall, the models built utilizing all features performed best. <br>
 
 **Performance Evaluation Metrics over Testing data:**
 
-| Round | MCC | Precision | Recall | Accuracy | F1 score |
-  | :---:  | :---:  | :---:  | :---:  |:---:  |:---:  |
-  |**1**| 0.799 | 0.914 | 0.731 | 0.963 | 0.813 |
-  |**2**| 0.774 | 0.819 | 0.777 | 0.957 | 0.798 |
-  |**3**| 0.822 | 0.849 | 0.834 | 0.967 | 0.841 |
-  |**4**| 0.818 | 0.830 | 0.845 | 0.964 | 0.838 |
-  |**5**| 0.791 | 0.832 | 0.794 | 0.960 | 0.813 |
+
+| Metrics      | Value           |
+| :----------- | :-------------- |
+| **MCC**      | 0.801 ± 0.018   |
+| **Precision**| 0.849 ± 0.034   |
+| **Recall**   | 0.796 ± 0.041   |
+| **Accuracy** | 0.962 ± 0.003   |
+| **F1 score** | 0.821 ± 0.016   |
 
 
 
