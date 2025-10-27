@@ -25,7 +25,7 @@ The **maximum PSWM score** across the window is retained as the sequence score.
 #### c.2 Optimal Threshold Selection
 Precision–Recall curves were used to show model performance per fold and combined across folds. The **F1-maximizing threshold** was selected for each round. Optimal thresholds were highlighted to indicate the best trade-off between precision and recall.
 
-![PR_round1](https://github.com/user-attachments/assets/40f93778-b847-482a-8600-3ee64c538590)
+![PR_round1](./visualization/PRC_round1.png)
 
 ### d. Testing
 #### d.1 Sequences Classification
@@ -33,7 +33,7 @@ Sequences from the test fold were scored using the trained PSWM and classified a
 
 Confusion matrices were used to display true positives, true negatives, false positives, and false negatives. Colored cells enhanced visual distinction between correct and incorrect predictions.
 
-![CM_round1](https://github.com/user-attachments/assets/42cc18b8-4a4e-496a-afa4-0c6d6e675cdf)
+![CM_round1](./visualization/CM_round1.png)
 
 ### e. Performance Evaluation
 Performance metrics were computed for each cross-validation round and averaged:
