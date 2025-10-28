@@ -16,7 +16,7 @@ Extracted features encode:
 
 All the scales were retrieved from [ProtScale](https://web.expasy.org/protscale/).
 
-For this task, the Jupyter notebook [07_feature_extraction.ipynb](./scripts/07_feature_extraction.ipynb) was used.
+For this task, the Jupyter notebook [08_SVM_main.ipynb](./scripts/08_SVM_main.ipynb) was used.
 
 ### b. Feature Scaling
 
