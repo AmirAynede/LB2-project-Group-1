@@ -10,8 +10,10 @@
 ### a. Data Organization
 The whole dataset was organized into two tab separated files (.tsv) cointaining the necessary information for the final evaluation of the two classifiers. These files describe the [training](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/files/performance.tsv) and the [testing](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/files/benchmarking.tsv) data. Both can be found in the [06_performance/files](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/06_performance/files) folder.
 ### b. Training
-The Position Specific Weight Matrix (**PSWM**) was built on the whole positive training dataset, using 15 residue long Signal Peptide fragments which represent the most significant residues in the signal peptide. In particular, the 13 residues preceding the cleavage site and the 2 following the cleavage site. 
-![PSWM](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/Von_Heijne/files/PSWM.png)
+The Position Specific Weight Matrix (**PSWM**) was built on the whole positive training dataset, using 15 residue long Signal Peptide fragments which represent the most significant residues in the signal peptide. In particular, the 13 residues preceding the cleavage site and the 2 following the cleavage site.  
+<br><br><br>
+![PSWM](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/Von_Heijne/files/PSWM.png) 
+<br><br><br>
 ### c. Testing
 The optimal threshold was selected as the average of the values of the optimal thresholds found in the cross validation step, which description can be found in the dedicated folder: [04_vonHeijne](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/04_vonHeijne). <br> <br>
 The score computed utilizing the PSWM was obtained for each sequence in the testing dataset. Consequently, it was compared to the optimal threshold to infere the **presence** (*score > threshold*) or the **absence** (*score < threshold*) of the signal peptide. 
@@ -25,5 +27,9 @@ Finally, the prediction labels were compared to the true class labels to compute
   |**F1-score**| 0.7064 |
   |**MCC**| 0.6696| 
   | **Threshold** |   8.8089  |
-The results of this procedures were summarized in a confusion matrix: 
-![confusion matrix](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/Von_Heijne/files/CM.png) 
+
+ <br>
+The results of this procedures were summarized in a confusion matrix:  <br><br><br>
+
+![confusion matrix](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/Von_Heijne/files/CM.png)  <br><br><br>
+
