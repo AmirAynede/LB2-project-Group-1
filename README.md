@@ -186,7 +186,30 @@ Overall, the models built utilizing all features performed best. <br>
 | **Accuracy** | 0.962 ± 0.003   |
 | **F1 score** | 0.821 ± 0.016   |
 
+## 6. Performance evaluation of the Von-Heijne and the SVM classifiers
+**Objective:** Evaluate the performance in the classification with respect to the presence (1) or absence (0) of a signal peptide (SP) of the eukaryotic protein sequences in the benchmarking dataset for both the Von-Heijne and the SVM models.
 
+### 6.1 : Von Heijne Classifier Performance
+#### Workflow
+  | Section | Title |
+  | :---:  | :---:  |
+  |a| **Data Organization** |
+  |b| **Training:** <br> Building PSWM on Training data |
+  |c| **Testing:** <br> Classification of Testing data|
+  |d| **Performance Evaluation** |
+  
+### Results
+The threshold used for the classification was the average of the best threshold values obtained in the cross validation step for the von Heijne implementation. The description can be found in the dedicated folder: [04_vonHeijne](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/04_vonHeijne). <br>
+The performance of the classifier built utilizing the whole training dataset is summarized in the following table: <br>
+
+  | Metric | Value | 
+  |:---:  | :---:  |
+  |**Accuracy**| 0.9312 | 
+  |**Precision**| 0.6614 | 
+  |**Recall**| 0.7580 | 
+  |**F1-score**| 0.7064 |
+  |**MCC**| 0.6696| 
+  | **Threshold** |   8.8089  |
 
   
 ## References 
