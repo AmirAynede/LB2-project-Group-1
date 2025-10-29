@@ -48,3 +48,11 @@ Where:
 
 <br>Both can be found in the [06_performance/files](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/06_performance/files) folder.
 
+### d. Analysis of Results:
+#### d.1 Von Heijne
+#### d.2 SVM
+Details can be found in the [README](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/06_performance/SVMs) of the [SVMs](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/06_performance/SVMs) performance evaluation folder.
+
+
+
+
