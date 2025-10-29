@@ -4,7 +4,7 @@
   | :---:  | :---:  |
   |a| **Data Organization** |
   |b| **Performance Evaluation of Von Heijne Method** |
-  |c| **Performance Evaluation of SVM Method:** |
+  |c| **Performance Evaluation of SVM Method** |
   |d| **Analysis of Results** |
   
 ### a. Data Organization
@@ -47,3 +47,4 @@ Where:
 * TM Helix: reports 'True' for negative sequences having a Trans-Membrane domain in the first 90 residues, 'False' otherwise. 
 
 <br>Both can be found in the [06_performance/files](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/06_performance/files) folder.
+
