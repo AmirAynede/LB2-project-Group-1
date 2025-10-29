@@ -21,12 +21,20 @@ The whole dataset was organized into two tab separated files (.tsv) cointaining 
 Finally, the prediction labels were compared to the true class labels to compute the following metrics: 
   | Metric | Value | 
   |:---:  | :---:  |
-  |**Accuracy**|  | 
-  |**Precision**|  | 
-  |**Recall**|  | 
-  |**F1-score**|  |
-  |**MCC**| | 
-
+  |**Accuracy**| 0.964 | 
+  |**Precision**| 0.835 | 
+  |**Recall**| 0.831 | 
+  |**F1-score**| 0.833 |
+  |**MCC**| 0.812 | 
+> Selected features Based Model Metrics
+  | Metric | Value | 
+  |:---:  | :---:  |
+  |**Accuracy**| 0.966 | 
+  |**Precision**| 0.850 | 
+  |**Recall**| 0.831 | 
+  |**F1-score**| 0.841 |
+  |**MCC**| 0.821 | 
+  > 
  <br>
 The results of this procedures were summarized in a confusion matrix:  <br><br><br>
 
