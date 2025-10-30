@@ -49,7 +49,14 @@ Finally, the prediction labels were compared to the true class labels to compute
 
   
  <br>
-The results of this procedures were summarized in a confusion matrix:  <br><br><br>
+The results of this procedures were summarized in a confusion matrix: <br>
+
+[Confusion Matrix with all features](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/CM_all_Performance_run.png): <br>
+![Confusion Matrix with all features](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/CM_all_Performance_run.png)
+
+[Confusion Matrix with selected features](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/CM_selected_Prediction_Run.png): <br>
+![Confusion Matrix with selected features](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/CM_selected_Prediction_Run.png)
+<br><br>
 
 ### e. Visualization
 #### Distribution of False Positives and False Negatives with respect to Kingdom and Species:
@@ -78,4 +85,5 @@ The FPR of sequences carryng a TM domain is 3.5178 times the FPR over all sequen
 #### Features comparison: True Positives vs False Negatives
 [Features: TP vs FN](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/Features_TPvsFN.png)<br>
 ![Features: TP vs FN](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/Features_TPvsFN.png)
+
 
