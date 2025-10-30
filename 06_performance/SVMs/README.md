@@ -46,7 +46,10 @@ Finally, the prediction labels were compared to the true class labels to compute
   |**F1-score**| 0.841 |
   |**MCC**| 0.821 |
   
+The effect of including more top features on model performance is visualized below. This plot was used to select the optimal number of features for the SVM:
 
+[MCC Curve](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/MCC_Performance_Run.png): <br>
+![MCC Curve](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/MCC_Performance_Run.png)
   
  <br>
 The results of this procedures were summarized in a confusion matrix: <br>
@@ -85,5 +88,6 @@ The FPR of sequences carryng a TM domain is 3.5178 times the FPR over all sequen
 #### Features comparison: True Positives vs False Negatives
 [Features: TP vs FN](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/Features_TPvsFN.png)<br>
 ![Features: TP vs FN](https://github.com/AmirAynede/LB2-project-Group-1/blob/main/06_performance/SVMs/files/Features_TPvsFN.png)
+
 
 
