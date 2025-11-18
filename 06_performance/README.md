@@ -37,7 +37,7 @@ Where:
   - 1 = 1st fold of training data
   - 2 = 2nd fold of training data
   - 3 = 3rd fold of training data
-  - 4 = 4rth fold of training data
+  - 4 = 4th fold of training data
   - 5 = 5th fold of training data 
 * Sequence: first 90 residues of the sequence are reported.
 * SP: relevant signal peptide residues for positive sequences, 'NIL' for negatives. 
@@ -52,6 +52,7 @@ Where:
 #### d.1 Von Heijne
 #### d.2 SVM
 Details can be found in the [README](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/06_performance/SVMs) of the [SVMs](https://github.com/AmirAynede/LB2-project-Group-1/tree/main/06_performance/SVMs) performance evaluation folder.
+
 
 
 
